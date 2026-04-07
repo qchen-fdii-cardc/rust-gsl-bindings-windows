@@ -1,37 +1,70 @@
-# Using the GSL library from Rust on Windows
+# Rust + GSL on Windows | 在 Windows 上使用 Rust 调用 GSL
 
 [![GitHub](https://img.shields.io/badge/GitHub-rust--gsl--bindings--windows-181717?logo=github)](https://github.com/qchen-fdii-cardc/rust-gsl-bindings-windows)
 
-## 项目访问链接
+## Project Links | 项目链接
 
-- GitHub仓库主页: <https://github.com/qchen-fdii-cardc/rust-gsl-bindings-windows>
-- SSH克隆地址: <git@github.com>:qchen-fdii-cardc/rust-gsl-bindings-windows.git
+- GitHub Repository | GitHub 仓库主页: <https://github.com/qchen-fdii-cardc/rust-gsl-bindings-windows>
+- SSH Clone URL | SSH 克隆地址: <git@github.com>:qchen-fdii-cardc/rust-gsl-bindings-windows.git
 
-## Prerequisites前提条件
+## Prerequisites | 前提条件
 
-- 安装Rust工具链
-- 安装LLVM工具链（如Clang）以编译生成绑定代码
-- Windows上安装GSL
-  - 本项目自带预编译GSL二进制文件和头文件（2.8版本，x64架构）
-  - nuget包：可以使用NuGet包管理器安装GSL的预编译二进制包
-  - vcpkg包：可以使用vcpkg包管理器安装GSL的预编译二进制包
-  - 从源代码编译安装GSL的Windows版本dll文件
+- Install Rust toolchain | 安装 Rust 工具链
+- Install bindgen-cli for FFI binding generation | 安装 bindgen-cli 用于生成 FFI 绑定
+- Install LLVM/Clang toolchain | 安装 LLVM/Clang 工具链
+- Install GSL on Windows | 在 Windows 上安装 GSL
+  - This repository includes prebuilt GSL binaries and headers (v2.8, x64) | 本项目已包含预编译 GSL 二进制和头文件（2.8，x64）
+  - NuGet package is also an option | 也可以使用 NuGet 包安装
+  - vcpkg package is also an option | 也可以使用 vcpkg 包安装
+  - Build GSL from source for Windows is also possible | 也可以从源码编译 Windows 版本 GSL
 
-## 本项目提供的功能
+Rust can be installed from the official website; rustup is recommended for toolchain management.  
+Rust 可通过官网安装，推荐使用 rustup 管理版本和组件。
 
-- 生成GSL绑定代码的PowerShell脚本
-- 使用生成的绑定代码调用GSL函数的Rust示例代码
-- 最终产生的运行程序，必须能找到GSL库的动态链接库（dll）文件
-- 测试代码验证绑定的完备性和正确性（正在进行中）
+Install bindgen-cli | 安装 bindgen-cli:
 
-## 生成绑定代码
+```bash
+cargo install bindgen-cli
+```
 
-运行项目根目录下的`generate-gsl-bindings.ps1`脚本将生成
-    - `include/wrapper.h`文件，其中包含了所有GSL头文件的umbrella wrapper。
-    - `src/gsl_bindings.rs`文件，其中包含了GSL库的Rust绑定代码。
+Install LLVM with winget (optional) | 使用 winget 安装 LLVM（可选）:
 
-## 编译过程
+```bash
+winget install --id LLVM.LLVM --source winget
+```
 
-`build.rs`脚本会在编译时检查生成的绑定文件是否存在或者过期，如果不存在/过期则运行生成脚本。
+If needed, set LIBCLANG_PATH to your LLVM bin directory so bindgen can locate libclang.  
+如有需要，请将 LIBCLANG_PATH 设置为 LLVM 的 bin 目录，确保 bindgen 能找到 libclang。
 
-编译器会链接GSL库的动态链接库（dll）文件。
+The script [scripts/generate-gsl-bindings.ps1](scripts/generate-gsl-bindings.ps1) already contains fallback logic for LIBCLANG_PATH (customize it to your local environment if needed).  
+[scripts/generate-gsl-bindings.ps1](scripts/generate-gsl-bindings.ps1) 已内置 LIBCLANG_PATH 的兜底逻辑（如有需要可改成你的本机路径）。
+
+## What This Project Provides | 本项目提供的内容
+
+- A PowerShell script to generate GSL bindings | 用于生成 GSL 绑定代码的 PowerShell 脚本
+- Rust examples that call GSL through generated bindings | 使用生成绑定调用 GSL 的 Rust 示例
+- Build/runtime setup for GSL DLLs on Windows | Windows 下 GSL DLL 的构建与运行支持
+- Tests for binding availability and correctness | 用于验证绑定可用性和正确性的测试
+
+## Binding Generation | 绑定生成流程
+
+Run the script below in repository root | 在仓库根目录运行下面脚本：
+
+```powershell
+./scripts/generate-gsl-bindings.ps1
+```
+
+The script performs two steps | 脚本执行两个阶段：
+
+1. Build `include/wrapper.h` from all `include/gsl/*.h` headers.  
+   从 `include/gsl/*.h` 自动构造 `include/wrapper.h`。
+2. Run bindgen-cli on wrapper.h and generate `src/gsl_bindings.rs`.  
+   对 wrapper.h 运行 bindgen-cli，生成 `src/gsl_bindings.rs`。
+
+## Build Behavior | 编译行为
+
+`build.rs` checks whether generated bindings are stale and runs the generation script only when necessary.  
+`build.rs` 会检查生成文件是否过期，仅在必要时自动调用生成脚本。
+
+During build/runtime, the project links and copies required GSL DLL files on Windows.  
+在 Windows 构建与运行过程中，项目会处理 GSL 所需 DLL 的链接与拷贝。
