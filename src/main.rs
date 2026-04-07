@@ -1,17 +1,15 @@
-use rust_gsl_bindings::gsl;
-use std::ffi::CStr;
+use rust_gsl_bindings::*;
 use std::prelude::rust_2024::*;
 
 fn main() {
     // Print GSL version as a C string instead of raw bytes.
 
-    let gsl_version =
-        unsafe { CStr::from_ptr(gsl::GSL_VERSION.as_ptr() as *const std::os::raw::c_char) }
-            .to_string_lossy();
+    let gsl_version = gsl_cstr!(gsl::GSL_VERSION);
+
     println!("GSL version: {gsl_version}");
 
-    let x = 30.20;
-    let y = gsl!(gsl_sf_bessel_J0(x));
+    let x = 0.20;
+    let y = gsl_call!(gsl_sf_bessel_J0(x));
 
     println!("J0({x}) = {y}");
 
@@ -20,20 +18,20 @@ fn main() {
     let coeffs: [f64; 6] = [-1.0, 0.0, 0.0, 0.0, 0.0, 1.0];
     let mut roots_packed = [0.0_f64; 10]; // 5 complex roots => 10 doubles (re,im pairs)
 
-    let w = gsl!(gsl_poly_complex_workspace_alloc(coeffs.len()));
+    let w = gsl_call!(gsl_poly_complex_workspace_alloc(coeffs.len()));
     assert!(
         !w.is_null(),
         "failed to allocate gsl_poly_complex_workspace"
     );
 
-    let status = gsl!(gsl_poly_complex_solve(
+    let status = gsl_call!(gsl_poly_complex_solve(
         coeffs.as_ptr(),
         coeffs.len(),
         w,
         roots_packed.as_mut_ptr(),
     ));
 
-    gsl!(gsl_poly_complex_workspace_free(w));
+    gsl_call!(gsl_poly_complex_workspace_free(w));
     assert_eq!(
         status, 0,
         "gsl_poly_complex_solve failed with status={status}"
@@ -48,7 +46,7 @@ fn main() {
 
     // Example: compute integral_0^1 x^2 dx = 1/3 with GSL adaptive integration.
     let limit: usize = 1000;
-    let workspace = gsl!(gsl_integration_workspace_alloc(limit));
+    let workspace = gsl_call!(gsl_integration_workspace_alloc(limit));
     assert!(
         !workspace.is_null(),
         "failed to allocate integration workspace"
@@ -63,7 +61,7 @@ fn main() {
 
     let mut result = 0.0_f64;
     let mut abserr = 0.0_f64;
-    let status = gsl!(gsl_integration_qag(
+    let status = gsl_call!(gsl_integration_qag(
         &mut f,
         0.0,
         1.0,
@@ -76,7 +74,7 @@ fn main() {
         &mut abserr,
     ));
 
-    gsl!(gsl_integration_workspace_free(workspace));
+    gsl_call!(gsl_integration_workspace_free(workspace));
     assert_eq!(status, 0, "gsl_integration_qag failed with status={status}");
 
     println!(
@@ -98,11 +96,11 @@ fn main() {
     let alpha = 1.0;
     let beta = 0.0;
 
-    let a_view = gsl!(gsl_matrix_view_array(a.as_ptr() as *mut f64, m, k));
-    let b_view = gsl!(gsl_matrix_view_array(b.as_ptr() as *mut f64, k, n));
-    let mut c_view = gsl!(gsl_matrix_view_array(c.as_mut_ptr(), m, n));
+    let a_view = gsl_call!(gsl_matrix_view_array(a.as_ptr() as *mut f64, m, k));
+    let b_view = gsl_call!(gsl_matrix_view_array(b.as_ptr() as *mut f64, k, n));
+    let mut c_view = gsl_call!(gsl_matrix_view_array(c.as_mut_ptr(), m, n));
 
-    let status = gsl!(gsl_blas_dgemm(
+    let status = gsl_call!(gsl_blas_dgemm(
         gsl::CBLAS_TRANSPOSE_CblasNoTrans as gsl::CBLAS_TRANSPOSE_t,
         gsl::CBLAS_TRANSPOSE_CblasNoTrans as gsl::CBLAS_TRANSPOSE_t,
         alpha,
@@ -123,7 +121,7 @@ fn main() {
 
     // gsl_vector_alloc/gsl_matrix_alloc 示例：分配一个 3x3 的矩阵，设置一些值，进行计算。
     let size = 3_usize;
-    let matrix = gsl!(gsl_matrix_alloc(size, size));
+    let matrix = gsl_call!(gsl_matrix_alloc(size, size));
     assert!(
         !matrix.is_null(),
         "failed to allocate gsl_matrix for 3x3 matrix"
@@ -134,14 +132,14 @@ fn main() {
             // unsafe {
             //     *gsl!(gsl_matrix_ptr(matrix, i, j)) = (i + j) as f64;
             // }
-            gsl!(gsl_matrix_set(matrix, i, j, (i + j) as f64));
+            gsl_call!(gsl_matrix_set(matrix, i, j, (i + j) as f64));
         }
     }
 
     println!("3x3 matrix with elements matrix[i][j] = i + j:");
     for i in 0..size {
         for j in 0..size {
-            let val = gsl!(gsl_matrix_get(matrix, i, j));
+            let val = gsl_call!(gsl_matrix_get(matrix, i, j));
             print!("{:5.1} ", val);
         }
         println!();
@@ -153,14 +151,14 @@ fn main() {
     let cols = unsafe { (*matrix).size2 };
     for i in 0..rows {
         for j in 0..cols {
-            let mut val = unsafe { *gsl!(gsl_matrix_ptr(matrix, i, j)) };
+            let mut val = unsafe { *gsl_call!(gsl_matrix_ptr(matrix, i, j)) };
             val += 0.5; // add 0.5 to show that we can modify the value through the pointer
             print!("{:5.1} ", val);
         }
         println!();
     }
 
-    gsl!(gsl_matrix_free(matrix));
+    gsl_call!(gsl_matrix_free(matrix));
 
     // Sobol quasi Monte Carlo example:
     // estimate integral over [0,1]^D of f(x1, x2, ..., xD).
@@ -169,7 +167,7 @@ fn main() {
     let n_points = 2000_usize; // number of quasi-random points to sample
     let mut points = vec![0.0_f64; dim * n_points];
     let sobol_type = unsafe { gsl::gsl_qrng_sobol };
-    let rng = gsl!(gsl_qrng_alloc(sobol_type, dim_qrng));
+    let rng = gsl_call!(gsl_qrng_alloc(sobol_type, dim_qrng));
     assert!(
         !rng.is_null(),
         "failed to allocate gsl_qrng for Sobol sequence generator"
@@ -181,24 +179,21 @@ fn main() {
         (-sum_squares).exp()
     };
 
-    gsl!(gsl_qrng_init(rng));
+    gsl_call!(gsl_qrng_init(rng));
     for i in 0..n_points {
         let point = &mut points[i * dim..(i + 1) * dim];
-        let status = gsl!(gsl_qrng_get(rng, point.as_mut_ptr()));
+        let status = gsl_call!(gsl_qrng_get(rng, point.as_mut_ptr()));
         assert_eq!(status, 0, "gsl_qrng_get failed with status={status}");
     }
-    gsl!(gsl_qrng_free(rng));
+    gsl_call!(gsl_qrng_free(rng));
 
-    let integral_estimate: f64 = points
-        .chunks(dim)
-        .map(|point| fn_to_integrate(point))
-        .sum::<f64>()
-        / (n_points as f64);
+    let integral_estimate: f64 =
+        points.chunks(dim).map(fn_to_integrate).sum::<f64>() / (n_points as f64);
     println!(
         "Integral exp(-sum(x1^2 + ... x{dim}^2)) over [0,1]^{dim} using {n_points} Sobol points: {integral_estimate:.16}"
     );
     // show the theoretical value for comparison: integral_0^1 exp(-x^2) dx = (sqrt(pi) * erf(1)) / 2
-    let theoretical_1d = (std::f64::consts::PI.sqrt() * gsl!(gsl_sf_erf(1.0_f64))) / 2.0;
+    let theoretical_1d = (std::f64::consts::PI.sqrt() * gsl_call!(gsl_sf_erf(1.0_f64))) / 2.0;
     let theoretical = theoretical_1d.powi(dim as i32);
     println!("Theoretical value for comparison: (sqrt(pi) * erf(1) / 2)^{dim} = {theoretical:.16}");
     println!(

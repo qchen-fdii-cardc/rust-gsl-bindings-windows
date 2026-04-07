@@ -12,7 +12,7 @@ Set-Location $repoRoot
 
 $wrapper = 'include/wrapper.h'
 $output = 'src/gsl_bindings.rs'
-
+ 
 # Step 1: Build umbrella wrapper.h from all local GSL headers.
 Write-Host 'Step 1/2: Building include/wrapper.h from include/gsl/*.h...'
 Get-ChildItem -Path 'include/gsl' -Filter '*.h' |
