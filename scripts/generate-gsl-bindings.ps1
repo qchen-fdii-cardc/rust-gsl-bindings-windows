@@ -4,28 +4,24 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path -Parent $PSScriptRoot
 Set-Location $repoRoot
 
-if (-not $env:LIBCLANG_PATH) {
-    # Fallback path for local development environment.
-    $defaultLibclangPath = 'C:\Program Files\ANSYS Inc\v222\optiSLang\scripting\algorithms\stochos_env\Lib\site-packages\clang\native'
-    if (Test-Path (Join-Path $defaultLibclangPath 'libclang.dll')) {
-        $env:LIBCLANG_PATH = $defaultLibclangPath
-    }
-}
-
-if (-not $env:LIBCLANG_PATH) {
-    throw 'LIBCLANG_PATH is not set and no default libclang.dll was found.'
-}
+# Set this if bindgen can't find libclang on your system. 
+# On Windows, the LLVM installer includes a copy of libclang.dll that works with bindgen.
+# $env:LIBCLANG_PATH = "C:\Program Files\LLVM\bin" # change this if your LLVM is installed somewhere else
+# Set it to the directory of LLVM
+#  winget install --id LLVM.LLVM --source winget will install LLVM
 
 $wrapper = 'include/wrapper.h'
 $output = 'src/gsl_bindings.rs'
 
-# Build a single umbrella header including all local GSL headers.
-Get-ChildItem -Path 'include/gsl' -Filter 'gsl_*.h' |
+# Step 1: Build umbrella wrapper.h from all local GSL headers.
+Write-Host 'Step 1/2: Building include/wrapper.h from include/gsl/*.h...'
+Get-ChildItem -Path 'include/gsl' -Filter '*.h' |
     Sort-Object Name |
     ForEach-Object { "#include <gsl/$($_.Name)>" } |
     Out-File -Encoding ascii $wrapper
-
-# Generate raw bindings.
+ 
+# Step 2: Run bindgen-cli from wrapper.h to produce raw bindings.
+Write-Host 'Step 2/2: Running bindgen-cli...'
 bindgen $wrapper --no-layout-tests --allowlist-function "gsl_.*" --allowlist-type "gsl_.*" --allowlist-var "GSL_.*|gsl_.*" -- -Iinclude | Out-File -Encoding ascii $output
 
 # On Windows MSVC, attach raw-dylib link attributes to every extern block so

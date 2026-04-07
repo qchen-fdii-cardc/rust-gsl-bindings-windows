@@ -1,4 +1,4 @@
-use random_rust::gsl;
+use rust_gsl_bindings::gsl;
 
 #[test]
 fn poly_const_and_struct_and_function() {
@@ -13,17 +13,17 @@ fn poly_const_and_struct_and_function() {
     let coeffs: [f64; 6] = [-1.0, 0.0, 0.0, 0.0, 0.0, 1.0];
     let mut roots = [0.0_f64; 10];
 
-    let ws = random_rust::gsl!(gsl_poly_complex_workspace_alloc(coeffs.len()));
+    let ws = gsl!(gsl_poly_complex_workspace_alloc(coeffs.len()));
     assert!(!ws.is_null());
 
-    let status = random_rust::gsl!(gsl_poly_complex_solve(
+    let status = gsl!(gsl_poly_complex_solve(
         coeffs.as_ptr(),
         coeffs.len(),
         ws,
         roots.as_mut_ptr(),
     ));
 
-    random_rust::gsl!(gsl_poly_complex_workspace_free(ws));
+    gsl!(gsl_poly_complex_workspace_free(ws));
     assert_eq!(status, 0);
 
     let has_one = (0..5).any(|i| {

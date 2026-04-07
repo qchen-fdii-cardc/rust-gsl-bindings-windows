@@ -2,10 +2,6 @@ use rust_gsl_bindings::gsl;
 use std::ffi::CStr;
 use std::prelude::rust_2024::*;
 
-unsafe extern "C" fn square_integrand(x: f64, _params: *mut std::os::raw::c_void) -> f64 {
-    x * x
-}
-
 fn main() {
     // Print GSL version as a C string instead of raw bytes.
 
@@ -57,7 +53,9 @@ fn main() {
         !workspace.is_null(),
         "failed to allocate integration workspace"
     );
-
+    unsafe extern "C" fn square_integrand(x: f64, _params: *mut std::os::raw::c_void) -> f64 {
+        x * x
+    }
     let mut f = gsl::gsl_function {
         function: Some(square_integrand),
         params: std::ptr::null_mut(),
@@ -144,6 +142,19 @@ fn main() {
     for i in 0..size {
         for j in 0..size {
             let val = gsl!(gsl_matrix_get(matrix, i, j));
+            print!("{:5.1} ", val);
+        }
+        println!();
+    }
+
+    // show how to access matrix elements directly
+    println!("Accessing matrix elements directly using gsl_matrix_ptr:");
+    let rows = unsafe { (*matrix).size1 };
+    let cols = unsafe { (*matrix).size2 };
+    for i in 0..rows {
+        for j in 0..cols {
+            let mut val = unsafe { *gsl!(gsl_matrix_ptr(matrix, i, j)) };
+            val += 0.5; // add 0.5 to show that we can modify the value through the pointer
             print!("{:5.1} ", val);
         }
         println!();

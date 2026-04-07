@@ -13,6 +13,22 @@ pub const GSL_PREC_DOUBLE: u32 = 0;
 pub const GSL_PREC_SINGLE: u32 = 1;
 pub const GSL_PREC_APPROX: u32 = 2;
 pub const GSL_MODE_DEFAULT: u32 = 0;
+pub const GSL_CONST_NUM_YOTTA: f64 = 1000000000000000000000000.0;
+pub const GSL_CONST_NUM_ZETTA: f64 = 1000000000000000000000.0;
+pub const GSL_CONST_NUM_EXA: f64 = 1000000000000000000.0;
+pub const GSL_CONST_NUM_PETA: f64 = 1000000000000000.0;
+pub const GSL_CONST_NUM_TERA: f64 = 1000000000000.0;
+pub const GSL_CONST_NUM_GIGA: f64 = 1000000000.0;
+pub const GSL_CONST_NUM_MEGA: f64 = 1000000.0;
+pub const GSL_CONST_NUM_KILO: f64 = 1000.0;
+pub const GSL_CONST_NUM_MILLI: f64 = 0.001;
+pub const GSL_CONST_NUM_MICRO: f64 = 0.000001;
+pub const GSL_CONST_NUM_NANO: f64 = 0.000000001;
+pub const GSL_CONST_NUM_PICO: f64 = 0.000000000001;
+pub const GSL_CONST_NUM_FEMTO: f64 = 0.000000000000001;
+pub const GSL_CONST_NUM_ATTO: f64 = 0.000000000000000001;
+pub const GSL_CONST_NUM_ZEPTO: f64 = 0.000000000000000000001;
+pub const GSL_CONST_NUM_YOCTO: f64 = 0.000000000000000000000001;
 pub const GSL_CONST_CGS_MINUTE: f64 = 60.0;
 pub const GSL_CONST_CGS_MICRON: f64 = 0.0001;
 pub const GSL_CONST_CGS_ANGSTROM: f64 = 0.00000001;
@@ -34,27 +50,6 @@ pub const GSL_CONST_CGS_NEWTON: f64 = 100000.0;
 pub const GSL_CONST_CGS_DYNE: f64 = 1.0;
 pub const GSL_CONST_CGS_JOULE: f64 = 10000000.0;
 pub const GSL_CONST_CGS_ERG: f64 = 1.0;
-pub const GSL_CONST_CGSM_MINUTE: f64 = 60.0;
-pub const GSL_CONST_CGSM_MICRON: f64 = 0.0001;
-pub const GSL_CONST_CGSM_ANGSTROM: f64 = 0.00000001;
-pub const GSL_CONST_CGSM_HECTARE: f64 = 100000000.0;
-pub const GSL_CONST_CGSM_BARN: f64 = 0.000000000000000000000001;
-pub const GSL_CONST_CGSM_LITER: f64 = 1000.0;
-pub const GSL_CONST_CGSM_METRIC_TON: f64 = 1000000.0;
-pub const GSL_CONST_CGSM_CARAT: f64 = 0.2;
-pub const GSL_CONST_CGSM_BAR: f64 = 1000000.0;
-pub const GSL_CONST_CGSM_POISE: f64 = 1.0;
-pub const GSL_CONST_CGSM_STOKES: f64 = 1.0;
-pub const GSL_CONST_CGSM_STILB: f64 = 1.0;
-pub const GSL_CONST_CGSM_LUMEN: f64 = 1.0;
-pub const GSL_CONST_CGSM_LUX: f64 = 0.0001;
-pub const GSL_CONST_CGSM_PHOT: f64 = 1.0;
-pub const GSL_CONST_CGSM_LAMBERT: f64 = 1.0;
-pub const GSL_CONST_CGSM_RAD: f64 = 100.0;
-pub const GSL_CONST_CGSM_NEWTON: f64 = 100000.0;
-pub const GSL_CONST_CGSM_DYNE: f64 = 1.0;
-pub const GSL_CONST_CGSM_JOULE: f64 = 10000000.0;
-pub const GSL_CONST_CGSM_ERG: f64 = 1.0;
 pub const GSL_CONST_MKS_MINUTE: f64 = 60.0;
 pub const GSL_CONST_MKS_MICRON: f64 = 0.000001;
 pub const GSL_CONST_MKS_ANGSTROM: f64 = 0.0000000001;
@@ -77,6 +72,27 @@ pub const GSL_CONST_MKS_DYNE: f64 = 0.00001;
 pub const GSL_CONST_MKS_JOULE: f64 = 1.0;
 pub const GSL_CONST_MKS_ERG: f64 = 0.0000001;
 pub const GSL_CONST_MKS_GAUSS: f64 = 0.0001;
+pub const GSL_CONST_CGSM_MINUTE: f64 = 60.0;
+pub const GSL_CONST_CGSM_MICRON: f64 = 0.0001;
+pub const GSL_CONST_CGSM_ANGSTROM: f64 = 0.00000001;
+pub const GSL_CONST_CGSM_HECTARE: f64 = 100000000.0;
+pub const GSL_CONST_CGSM_BARN: f64 = 0.000000000000000000000001;
+pub const GSL_CONST_CGSM_LITER: f64 = 1000.0;
+pub const GSL_CONST_CGSM_METRIC_TON: f64 = 1000000.0;
+pub const GSL_CONST_CGSM_CARAT: f64 = 0.2;
+pub const GSL_CONST_CGSM_BAR: f64 = 1000000.0;
+pub const GSL_CONST_CGSM_POISE: f64 = 1.0;
+pub const GSL_CONST_CGSM_STOKES: f64 = 1.0;
+pub const GSL_CONST_CGSM_STILB: f64 = 1.0;
+pub const GSL_CONST_CGSM_LUMEN: f64 = 1.0;
+pub const GSL_CONST_CGSM_LUX: f64 = 0.0001;
+pub const GSL_CONST_CGSM_PHOT: f64 = 1.0;
+pub const GSL_CONST_CGSM_LAMBERT: f64 = 1.0;
+pub const GSL_CONST_CGSM_RAD: f64 = 100.0;
+pub const GSL_CONST_CGSM_NEWTON: f64 = 100000.0;
+pub const GSL_CONST_CGSM_DYNE: f64 = 1.0;
+pub const GSL_CONST_CGSM_JOULE: f64 = 10000000.0;
+pub const GSL_CONST_CGSM_ERG: f64 = 1.0;
 pub const GSL_CONST_MKSA_MINUTE: f64 = 60.0;
 pub const GSL_CONST_MKSA_MICRON: f64 = 0.000001;
 pub const GSL_CONST_MKSA_ANGSTROM: f64 = 0.0000000001;
@@ -99,22 +115,6 @@ pub const GSL_CONST_MKSA_DYNE: f64 = 0.00001;
 pub const GSL_CONST_MKSA_JOULE: f64 = 1.0;
 pub const GSL_CONST_MKSA_ERG: f64 = 0.0000001;
 pub const GSL_CONST_MKSA_GAUSS: f64 = 0.0001;
-pub const GSL_CONST_NUM_YOTTA: f64 = 1000000000000000000000000.0;
-pub const GSL_CONST_NUM_ZETTA: f64 = 1000000000000000000000.0;
-pub const GSL_CONST_NUM_EXA: f64 = 1000000000000000000.0;
-pub const GSL_CONST_NUM_PETA: f64 = 1000000000000000.0;
-pub const GSL_CONST_NUM_TERA: f64 = 1000000000000.0;
-pub const GSL_CONST_NUM_GIGA: f64 = 1000000000.0;
-pub const GSL_CONST_NUM_MEGA: f64 = 1000000.0;
-pub const GSL_CONST_NUM_KILO: f64 = 1000.0;
-pub const GSL_CONST_NUM_MILLI: f64 = 0.001;
-pub const GSL_CONST_NUM_MICRO: f64 = 0.000001;
-pub const GSL_CONST_NUM_NANO: f64 = 0.000000001;
-pub const GSL_CONST_NUM_PICO: f64 = 0.000000000001;
-pub const GSL_CONST_NUM_FEMTO: f64 = 0.000000000000001;
-pub const GSL_CONST_NUM_ATTO: f64 = 0.000000000000000001;
-pub const GSL_CONST_NUM_ZEPTO: f64 = 0.000000000000000000001;
-pub const GSL_CONST_NUM_YOCTO: f64 = 0.000000000000000000000001;
 pub const GSL_MESSAGE_MASK: u32 = 4294967295;
 pub const GSL_ODEIV_HADJ_INC: u32 = 1;
 pub const GSL_ODEIV_HADJ_NIL: u32 = 0;
@@ -129,24 +129,6 @@ pub const GSL_SPMATRIX_FLG_FIXED: u32 = 2;
 pub const GSL_VERSION: &[u8; 4] = b"2.8\0";
 pub const GSL_MAJOR_VERSION: u32 = 2;
 pub const GSL_MINOR_VERSION: u32 = 8;
-pub const CBLAS_TRANSPOSE_CblasNoTrans: CBLAS_TRANSPOSE = 111;
-pub const CBLAS_TRANSPOSE_CblasTrans: CBLAS_TRANSPOSE = 112;
-pub const CBLAS_TRANSPOSE_CblasConjTrans: CBLAS_TRANSPOSE = 113;
-pub type CBLAS_TRANSPOSE = ::std::os::raw::c_int;
-pub const CBLAS_UPLO_CblasUpper: CBLAS_UPLO = 121;
-pub const CBLAS_UPLO_CblasLower: CBLAS_UPLO = 122;
-pub type CBLAS_UPLO = ::std::os::raw::c_int;
-pub const CBLAS_DIAG_CblasNonUnit: CBLAS_DIAG = 131;
-pub const CBLAS_DIAG_CblasUnit: CBLAS_DIAG = 132;
-pub type CBLAS_DIAG = ::std::os::raw::c_int;
-pub const CBLAS_SIDE_CblasLeft: CBLAS_SIDE = 141;
-pub const CBLAS_SIDE_CblasRight: CBLAS_SIDE = 142;
-pub type CBLAS_SIDE = ::std::os::raw::c_int;
-pub type CBLAS_INDEX_t = usize;
-pub use self::CBLAS_DIAG as CBLAS_DIAG_t;
-pub use self::CBLAS_SIDE as CBLAS_SIDE_t;
-pub use self::CBLAS_TRANSPOSE as CBLAS_TRANSPOSE_t;
-pub use self::CBLAS_UPLO as CBLAS_UPLO_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _iobuf {
@@ -6754,6 +6736,24 @@ unsafe extern "C" {
         i: usize,
     ) -> *const ::std::os::raw::c_char;
 }
+pub const CBLAS_TRANSPOSE_CblasNoTrans: CBLAS_TRANSPOSE = 111;
+pub const CBLAS_TRANSPOSE_CblasTrans: CBLAS_TRANSPOSE = 112;
+pub const CBLAS_TRANSPOSE_CblasConjTrans: CBLAS_TRANSPOSE = 113;
+pub type CBLAS_TRANSPOSE = ::std::os::raw::c_int;
+pub const CBLAS_UPLO_CblasUpper: CBLAS_UPLO = 121;
+pub const CBLAS_UPLO_CblasLower: CBLAS_UPLO = 122;
+pub type CBLAS_UPLO = ::std::os::raw::c_int;
+pub const CBLAS_DIAG_CblasNonUnit: CBLAS_DIAG = 131;
+pub const CBLAS_DIAG_CblasUnit: CBLAS_DIAG = 132;
+pub type CBLAS_DIAG = ::std::os::raw::c_int;
+pub const CBLAS_SIDE_CblasLeft: CBLAS_SIDE = 141;
+pub const CBLAS_SIDE_CblasRight: CBLAS_SIDE = 142;
+pub type CBLAS_SIDE = ::std::os::raw::c_int;
+pub type CBLAS_INDEX_t = usize;
+pub use self::CBLAS_DIAG as CBLAS_DIAG_t;
+pub use self::CBLAS_SIDE as CBLAS_SIDE_t;
+pub use self::CBLAS_TRANSPOSE as CBLAS_TRANSPOSE_t;
+pub use self::CBLAS_UPLO as CBLAS_UPLO_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct gsl_matrix_complex_long_double {
@@ -18428,47 +18428,6 @@ pub type gsl_fft_direction = ::std::os::raw::c_int;
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_dft_complex_float_forward(
-        data: *const f32,
-        stride: usize,
-        n: usize,
-        result: *mut f32,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_dft_complex_float_backward(
-        data: *const f32,
-        stride: usize,
-        n: usize,
-        result: *mut f32,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_dft_complex_float_inverse(
-        data: *const f32,
-        stride: usize,
-        n: usize,
-        result: *mut f32,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_dft_complex_float_transform(
-        data: *const f32,
-        stride: usize,
-        n: usize,
-        result: *mut f32,
-        sign: gsl_fft_direction,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
     pub fn gsl_dft_complex_forward(
         data: *const f64,
         stride: usize,
@@ -18504,6 +18463,47 @@ unsafe extern "C" {
         stride: usize,
         n: usize,
         result: *mut f64,
+        sign: gsl_fft_direction,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_dft_complex_float_forward(
+        data: *const f32,
+        stride: usize,
+        n: usize,
+        result: *mut f32,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_dft_complex_float_backward(
+        data: *const f32,
+        stride: usize,
+        n: usize,
+        result: *mut f32,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_dft_complex_float_inverse(
+        data: *const f32,
+        stride: usize,
+        n: usize,
+        result: *mut f32,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_dft_complex_float_transform(
+        data: *const f32,
+        stride: usize,
+        n: usize,
+        result: *mut f32,
         sign: gsl_fft_direction,
     ) -> ::std::os::raw::c_int;
 }
@@ -19211,6 +19211,168 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
+    pub fn gsl_fft_complex_radix2_forward(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_radix2_backward(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_radix2_inverse(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_radix2_transform(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+        sign: gsl_fft_direction,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_radix2_dif_forward(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_radix2_dif_backward(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_radix2_dif_inverse(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_radix2_dif_transform(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+        sign: gsl_fft_direction,
+    ) -> ::std::os::raw::c_int;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct gsl_fft_complex_wavetable {
+    pub n: usize,
+    pub nf: usize,
+    pub factor: [usize; 64usize],
+    pub twiddle: [*mut gsl_complex; 64usize],
+    pub trig: *mut gsl_complex,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct gsl_fft_complex_workspace {
+    pub n: usize,
+    pub scratch: *mut f64,
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_wavetable_alloc(n: usize) -> *mut gsl_fft_complex_wavetable;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_wavetable_free(wavetable: *mut gsl_fft_complex_wavetable);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_workspace_alloc(n: usize) -> *mut gsl_fft_complex_workspace;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_workspace_free(workspace: *mut gsl_fft_complex_workspace);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_memcpy(
+        dest: *mut gsl_fft_complex_wavetable,
+        src: *mut gsl_fft_complex_wavetable,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_forward(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+        wavetable: *const gsl_fft_complex_wavetable,
+        work: *mut gsl_fft_complex_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_backward(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+        wavetable: *const gsl_fft_complex_wavetable,
+        work: *mut gsl_fft_complex_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_inverse(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+        wavetable: *const gsl_fft_complex_wavetable,
+        work: *mut gsl_fft_complex_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_complex_transform(
+        data: gsl_complex_packed_array,
+        stride: usize,
+        n: usize,
+        wavetable: *const gsl_fft_complex_wavetable,
+        work: *mut gsl_fft_complex_workspace,
+        sign: gsl_fft_direction,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
     pub fn gsl_fft_complex_float_radix2_forward(
         data: gsl_complex_packed_array_float,
         stride: usize,
@@ -19373,80 +19535,15 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_fft_complex_radix2_forward(
-        data: gsl_complex_packed_array,
+    pub fn gsl_fft_real_radix2_transform(
+        data: *mut f64,
         stride: usize,
         n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_complex_radix2_backward(
-        data: gsl_complex_packed_array,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_complex_radix2_inverse(
-        data: gsl_complex_packed_array,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_complex_radix2_transform(
-        data: gsl_complex_packed_array,
-        stride: usize,
-        n: usize,
-        sign: gsl_fft_direction,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_complex_radix2_dif_forward(
-        data: gsl_complex_packed_array,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_complex_radix2_dif_backward(
-        data: gsl_complex_packed_array,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_complex_radix2_dif_inverse(
-        data: gsl_complex_packed_array,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_complex_radix2_dif_transform(
-        data: gsl_complex_packed_array,
-        stride: usize,
-        n: usize,
-        sign: gsl_fft_direction,
     ) -> ::std::os::raw::c_int;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gsl_fft_complex_wavetable {
+pub struct gsl_fft_real_wavetable {
     pub n: usize,
     pub nf: usize,
     pub factor: [usize; 64usize],
@@ -19455,81 +19552,148 @@ pub struct gsl_fft_complex_wavetable {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gsl_fft_complex_workspace {
+pub struct gsl_fft_real_workspace {
     pub n: usize,
     pub scratch: *mut f64,
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_fft_complex_wavetable_alloc(n: usize) -> *mut gsl_fft_complex_wavetable;
+    pub fn gsl_fft_real_wavetable_alloc(n: usize) -> *mut gsl_fft_real_wavetable;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_fft_complex_wavetable_free(wavetable: *mut gsl_fft_complex_wavetable);
+    pub fn gsl_fft_real_wavetable_free(wavetable: *mut gsl_fft_real_wavetable);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_fft_complex_workspace_alloc(n: usize) -> *mut gsl_fft_complex_workspace;
+    pub fn gsl_fft_real_workspace_alloc(n: usize) -> *mut gsl_fft_real_workspace;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_fft_complex_workspace_free(workspace: *mut gsl_fft_complex_workspace);
+    pub fn gsl_fft_real_workspace_free(workspace: *mut gsl_fft_real_workspace);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_fft_complex_memcpy(
-        dest: *mut gsl_fft_complex_wavetable,
-        src: *mut gsl_fft_complex_wavetable,
+    pub fn gsl_fft_real_transform(
+        data: *mut f64,
+        stride: usize,
+        n: usize,
+        wavetable: *const gsl_fft_real_wavetable,
+        work: *mut gsl_fft_real_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_fft_complex_forward(
-        data: gsl_complex_packed_array,
+    pub fn gsl_fft_real_unpack(
+        real_coefficient: *const f64,
+        complex_coefficient: *mut f64,
         stride: usize,
         n: usize,
-        wavetable: *const gsl_fft_complex_wavetable,
-        work: *mut gsl_fft_complex_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_fft_complex_backward(
-        data: gsl_complex_packed_array,
+    pub fn gsl_fft_halfcomplex_radix2_backward(
+        data: *mut f64,
         stride: usize,
         n: usize,
-        wavetable: *const gsl_fft_complex_wavetable,
-        work: *mut gsl_fft_complex_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_fft_complex_inverse(
-        data: gsl_complex_packed_array,
+    pub fn gsl_fft_halfcomplex_radix2_inverse(
+        data: *mut f64,
         stride: usize,
         n: usize,
-        wavetable: *const gsl_fft_complex_wavetable,
-        work: *mut gsl_fft_complex_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_fft_complex_transform(
-        data: gsl_complex_packed_array,
+    pub fn gsl_fft_halfcomplex_radix2_transform(
+        data: *mut f64,
         stride: usize,
         n: usize,
-        wavetable: *const gsl_fft_complex_wavetable,
-        work: *mut gsl_fft_complex_workspace,
-        sign: gsl_fft_direction,
+    ) -> ::std::os::raw::c_int;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct gsl_fft_halfcomplex_wavetable {
+    pub n: usize,
+    pub nf: usize,
+    pub factor: [usize; 64usize],
+    pub twiddle: [*mut gsl_complex; 64usize],
+    pub trig: *mut gsl_complex,
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_halfcomplex_wavetable_alloc(n: usize) -> *mut gsl_fft_halfcomplex_wavetable;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_halfcomplex_wavetable_free(wavetable: *mut gsl_fft_halfcomplex_wavetable);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_halfcomplex_backward(
+        data: *mut f64,
+        stride: usize,
+        n: usize,
+        wavetable: *const gsl_fft_halfcomplex_wavetable,
+        work: *mut gsl_fft_real_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_halfcomplex_inverse(
+        data: *mut f64,
+        stride: usize,
+        n: usize,
+        wavetable: *const gsl_fft_halfcomplex_wavetable,
+        work: *mut gsl_fft_real_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_halfcomplex_transform(
+        data: *mut f64,
+        stride: usize,
+        n: usize,
+        wavetable: *const gsl_fft_halfcomplex_wavetable,
+        work: *mut gsl_fft_real_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_halfcomplex_unpack(
+        halfcomplex_coefficient: *const f64,
+        complex_coefficient: *mut f64,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_fft_halfcomplex_radix2_unpack(
+        halfcomplex_coefficient: *const f64,
+        complex_coefficient: *mut f64,
+        stride: usize,
+        n: usize,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
@@ -19696,170 +19860,6 @@ unsafe extern "C" {
     pub fn gsl_fft_halfcomplex_float_radix2_unpack(
         halfcomplex_coefficient: *const f32,
         complex_coefficient: *mut f32,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_real_radix2_transform(
-        data: *mut f64,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct gsl_fft_real_wavetable {
-    pub n: usize,
-    pub nf: usize,
-    pub factor: [usize; 64usize],
-    pub twiddle: [*mut gsl_complex; 64usize],
-    pub trig: *mut gsl_complex,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct gsl_fft_real_workspace {
-    pub n: usize,
-    pub scratch: *mut f64,
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_real_wavetable_alloc(n: usize) -> *mut gsl_fft_real_wavetable;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_real_wavetable_free(wavetable: *mut gsl_fft_real_wavetable);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_real_workspace_alloc(n: usize) -> *mut gsl_fft_real_workspace;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_real_workspace_free(workspace: *mut gsl_fft_real_workspace);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_real_transform(
-        data: *mut f64,
-        stride: usize,
-        n: usize,
-        wavetable: *const gsl_fft_real_wavetable,
-        work: *mut gsl_fft_real_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_real_unpack(
-        real_coefficient: *const f64,
-        complex_coefficient: *mut f64,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_halfcomplex_radix2_backward(
-        data: *mut f64,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_halfcomplex_radix2_inverse(
-        data: *mut f64,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_halfcomplex_radix2_transform(
-        data: *mut f64,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct gsl_fft_halfcomplex_wavetable {
-    pub n: usize,
-    pub nf: usize,
-    pub factor: [usize; 64usize],
-    pub twiddle: [*mut gsl_complex; 64usize],
-    pub trig: *mut gsl_complex,
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_halfcomplex_wavetable_alloc(n: usize) -> *mut gsl_fft_halfcomplex_wavetable;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_halfcomplex_wavetable_free(wavetable: *mut gsl_fft_halfcomplex_wavetable);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_halfcomplex_backward(
-        data: *mut f64,
-        stride: usize,
-        n: usize,
-        wavetable: *const gsl_fft_halfcomplex_wavetable,
-        work: *mut gsl_fft_real_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_halfcomplex_inverse(
-        data: *mut f64,
-        stride: usize,
-        n: usize,
-        wavetable: *const gsl_fft_halfcomplex_wavetable,
-        work: *mut gsl_fft_real_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_halfcomplex_transform(
-        data: *mut f64,
-        stride: usize,
-        n: usize,
-        wavetable: *const gsl_fft_halfcomplex_wavetable,
-        work: *mut gsl_fft_real_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_halfcomplex_unpack(
-        halfcomplex_coefficient: *const f64,
-        complex_coefficient: *mut f64,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_fft_halfcomplex_radix2_unpack(
-        halfcomplex_coefficient: *const f64,
-        complex_coefficient: *mut f64,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -24993,6 +24993,20 @@ unsafe extern "C" {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
+pub struct gsl_monte_function_struct {
+    pub f: ::std::option::Option<
+        unsafe extern "C" fn(
+            x_array: *mut f64,
+            dim: usize,
+            params: *mut ::std::os::raw::c_void,
+        ) -> f64,
+    >,
+    pub dim: usize,
+    pub params: *mut ::std::os::raw::c_void,
+}
+pub type gsl_monte_function = gsl_monte_function_struct;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
 pub struct gsl_rng_type {
     pub name: *const ::std::os::raw::c_char,
     pub max: ::std::os::raw::c_ulong,
@@ -25433,20 +25447,6 @@ unsafe extern "C" {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gsl_monte_function_struct {
-    pub f: ::std::option::Option<
-        unsafe extern "C" fn(
-            x_array: *mut f64,
-            dim: usize,
-            params: *mut ::std::os::raw::c_void,
-        ) -> f64,
-    >,
-    pub dim: usize,
-    pub params: *mut ::std::os::raw::c_void,
-}
-pub type gsl_monte_function = gsl_monte_function_struct;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
 pub struct gsl_monte_plain_state {
     pub dim: usize,
     pub x: *mut f64,
@@ -25670,6 +25670,589 @@ unsafe extern "C" {
         state: *mut gsl_monte_vegas_state,
         params: *const gsl_monte_vegas_params,
     );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct gsl_multifit_linear_workspace {
+    pub nmax: usize,
+    pub pmax: usize,
+    pub n: usize,
+    pub p: usize,
+    pub A: *mut gsl_matrix,
+    pub Q: *mut gsl_matrix,
+    pub QSI: *mut gsl_matrix,
+    pub S: *mut gsl_vector,
+    pub t: *mut gsl_vector,
+    pub xt: *mut gsl_vector,
+    pub D: *mut gsl_vector,
+    pub rcond: f64,
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_alloc(n: usize, p: usize) -> *mut gsl_multifit_linear_workspace;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_free(w: *mut gsl_multifit_linear_workspace);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear(
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        c: *mut gsl_vector,
+        cov: *mut gsl_matrix,
+        chisq: *mut f64,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_tsvd(
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        tol: f64,
+        c: *mut gsl_vector,
+        cov: *mut gsl_matrix,
+        chisq: *mut f64,
+        rank: *mut usize,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_svd(
+        X: *const gsl_matrix,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_bsvd(
+        X: *const gsl_matrix,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_rank(tol: f64, work: *const gsl_multifit_linear_workspace) -> usize;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_solve(
+        lambda: f64,
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        c: *mut gsl_vector,
+        rnorm: *mut f64,
+        snorm: *mut f64,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_applyW(
+        X: *const gsl_matrix,
+        w: *const gsl_vector,
+        y: *const gsl_vector,
+        WX: *mut gsl_matrix,
+        Wy: *mut gsl_vector,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_stdform1(
+        L: *const gsl_vector,
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        Xs: *mut gsl_matrix,
+        ys: *mut gsl_vector,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_wstdform1(
+        L: *const gsl_vector,
+        X: *const gsl_matrix,
+        w: *const gsl_vector,
+        y: *const gsl_vector,
+        Xs: *mut gsl_matrix,
+        ys: *mut gsl_vector,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_L_decomp(
+        L: *mut gsl_matrix,
+        tau: *mut gsl_vector,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_stdform2(
+        LQR: *const gsl_matrix,
+        Ltau: *const gsl_vector,
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        Xs: *mut gsl_matrix,
+        ys: *mut gsl_vector,
+        M: *mut gsl_matrix,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_wstdform2(
+        LQR: *const gsl_matrix,
+        Ltau: *const gsl_vector,
+        X: *const gsl_matrix,
+        w: *const gsl_vector,
+        y: *const gsl_vector,
+        Xs: *mut gsl_matrix,
+        ys: *mut gsl_vector,
+        M: *mut gsl_matrix,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_genform1(
+        L: *const gsl_vector,
+        cs: *const gsl_vector,
+        c: *mut gsl_vector,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_genform2(
+        LQR: *const gsl_matrix,
+        Ltau: *const gsl_vector,
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        cs: *const gsl_vector,
+        M: *const gsl_matrix,
+        c: *mut gsl_vector,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_wgenform2(
+        LQR: *const gsl_matrix,
+        Ltau: *const gsl_vector,
+        X: *const gsl_matrix,
+        w: *const gsl_vector,
+        y: *const gsl_vector,
+        cs: *const gsl_vector,
+        M: *const gsl_matrix,
+        c: *mut gsl_vector,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_lreg(
+        smin: f64,
+        smax: f64,
+        reg_param: *mut gsl_vector,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_lcurve(
+        y: *const gsl_vector,
+        reg_param: *mut gsl_vector,
+        rho: *mut gsl_vector,
+        eta: *mut gsl_vector,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_lcurvature(
+        y: *const gsl_vector,
+        reg_param: *const gsl_vector,
+        rho: *const gsl_vector,
+        eta: *const gsl_vector,
+        kappa: *mut gsl_vector,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_lcurvature_menger(
+        rho: *const gsl_vector,
+        eta: *const gsl_vector,
+        kappa: *mut gsl_vector,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_lcorner(
+        rho: *const gsl_vector,
+        eta: *const gsl_vector,
+        idx: *mut usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_lcorner2(
+        reg_param: *const gsl_vector,
+        eta: *const gsl_vector,
+        idx: *mut usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_Lk(p: usize, k: usize, L: *mut gsl_matrix) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_Lsobolev(
+        p: usize,
+        kmax: usize,
+        alpha: *const gsl_vector,
+        L: *mut gsl_matrix,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_wlinear(
+        X: *const gsl_matrix,
+        w: *const gsl_vector,
+        y: *const gsl_vector,
+        c: *mut gsl_vector,
+        cov: *mut gsl_matrix,
+        chisq: *mut f64,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_wlinear_tsvd(
+        X: *const gsl_matrix,
+        w: *const gsl_vector,
+        y: *const gsl_vector,
+        tol: f64,
+        c: *mut gsl_vector,
+        cov: *mut gsl_matrix,
+        chisq: *mut f64,
+        rank: *mut usize,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_wlinear_svd(
+        X: *const gsl_matrix,
+        w: *const gsl_vector,
+        y: *const gsl_vector,
+        tol: f64,
+        rank: *mut usize,
+        c: *mut gsl_vector,
+        cov: *mut gsl_matrix,
+        chisq: *mut f64,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_wlinear_usvd(
+        X: *const gsl_matrix,
+        w: *const gsl_vector,
+        y: *const gsl_vector,
+        tol: f64,
+        rank: *mut usize,
+        c: *mut gsl_vector,
+        cov: *mut gsl_matrix,
+        chisq: *mut f64,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_est(
+        x: *const gsl_vector,
+        c: *const gsl_vector,
+        cov: *const gsl_matrix,
+        y: *mut f64,
+        y_err: *mut f64,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_rcond(w: *const gsl_multifit_linear_workspace) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_residuals(
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        c: *const gsl_vector,
+        r: *mut gsl_vector,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_gcv_init(
+        y: *const gsl_vector,
+        reg_param: *mut gsl_vector,
+        UTy: *mut gsl_vector,
+        delta0: *mut f64,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_gcv_curve(
+        reg_param: *const gsl_vector,
+        UTy: *const gsl_vector,
+        delta0: f64,
+        G: *mut gsl_vector,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_gcv_min(
+        reg_param: *const gsl_vector,
+        UTy: *const gsl_vector,
+        G: *const gsl_vector,
+        delta0: f64,
+        lambda: *mut f64,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_gcv_calc(
+        lambda: f64,
+        UTy: *const gsl_vector,
+        delta0: f64,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_linear_gcv(
+        y: *const gsl_vector,
+        reg_param: *mut gsl_vector,
+        G: *mut gsl_vector,
+        lambda: *mut f64,
+        G_lambda: *mut f64,
+        work: *mut gsl_multifit_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct gsl_multifit_robust_type {
+    pub name: *const ::std::os::raw::c_char,
+    pub wfun: ::std::option::Option<
+        unsafe extern "C" fn(r: *const gsl_vector, w: *mut gsl_vector) -> ::std::os::raw::c_int,
+    >,
+    pub psi_deriv: ::std::option::Option<
+        unsafe extern "C" fn(r: *const gsl_vector, dpsi: *mut gsl_vector) -> ::std::os::raw::c_int,
+    >,
+    pub tuning_default: f64,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct gsl_multifit_robust_stats {
+    pub sigma_ols: f64,
+    pub sigma_mad: f64,
+    pub sigma_rob: f64,
+    pub sigma: f64,
+    pub Rsq: f64,
+    pub adj_Rsq: f64,
+    pub rmse: f64,
+    pub sse: f64,
+    pub dof: usize,
+    pub numit: usize,
+    pub weights: *mut gsl_vector,
+    pub r: *mut gsl_vector,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct gsl_multifit_robust_workspace {
+    pub n: usize,
+    pub p: usize,
+    pub numit: usize,
+    pub maxiter: usize,
+    pub type_: *const gsl_multifit_robust_type,
+    pub tune: f64,
+    pub r: *mut gsl_vector,
+    pub weights: *mut gsl_vector,
+    pub c_prev: *mut gsl_vector,
+    pub resfac: *mut gsl_vector,
+    pub psi: *mut gsl_vector,
+    pub dpsi: *mut gsl_vector,
+    pub QSI: *mut gsl_matrix,
+    pub D: *mut gsl_vector,
+    pub workn: *mut gsl_vector,
+    pub stats: gsl_multifit_robust_stats,
+    pub multifit_p: *mut gsl_multifit_linear_workspace,
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub static mut gsl_multifit_robust_default: *const gsl_multifit_robust_type;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub static mut gsl_multifit_robust_bisquare: *const gsl_multifit_robust_type;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub static mut gsl_multifit_robust_cauchy: *const gsl_multifit_robust_type;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub static mut gsl_multifit_robust_fair: *const gsl_multifit_robust_type;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub static mut gsl_multifit_robust_huber: *const gsl_multifit_robust_type;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub static mut gsl_multifit_robust_ols: *const gsl_multifit_robust_type;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub static mut gsl_multifit_robust_welsch: *const gsl_multifit_robust_type;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_robust_alloc(
+        T: *const gsl_multifit_robust_type,
+        n: usize,
+        p: usize,
+    ) -> *mut gsl_multifit_robust_workspace;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_robust_free(w: *mut gsl_multifit_robust_workspace);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_robust_tune(
+        tune: f64,
+        w: *mut gsl_multifit_robust_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_robust_maxiter(
+        maxiter: usize,
+        w: *mut gsl_multifit_robust_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_robust_name(
+        w: *const gsl_multifit_robust_workspace,
+    ) -> *const ::std::os::raw::c_char;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_robust_statistics(
+        w: *const gsl_multifit_robust_workspace,
+    ) -> gsl_multifit_robust_stats;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_robust_weights(
+        r: *const gsl_vector,
+        wts: *mut gsl_vector,
+        w: *mut gsl_multifit_robust_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_robust(
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        c: *mut gsl_vector,
+        cov: *mut gsl_matrix,
+        w: *mut gsl_multifit_robust_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_robust_est(
+        x: *const gsl_vector,
+        c: *const gsl_vector,
+        cov: *const gsl_matrix,
+        y: *mut f64,
+        y_err: *mut f64,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multifit_robust_residuals(
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        c: *const gsl_vector,
+        r: *mut gsl_vector,
+        w: *mut gsl_multifit_robust_workspace,
+    ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
@@ -26672,130 +27255,161 @@ unsafe extern "C" {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gsl_multifit_linear_workspace {
-    pub nmax: usize,
-    pub pmax: usize,
-    pub n: usize,
+pub struct gsl_multilarge_linear_type {
+    pub name: *const ::std::os::raw::c_char,
+    pub alloc: ::std::option::Option<unsafe extern "C" fn(p: usize) -> *mut ::std::os::raw::c_void>,
+    pub reset: ::std::option::Option<
+        unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
+    >,
+    pub accumulate: ::std::option::Option<
+        unsafe extern "C" fn(
+            X: *mut gsl_matrix,
+            y: *mut gsl_vector,
+            arg1: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int,
+    >,
+    pub solve: ::std::option::Option<
+        unsafe extern "C" fn(
+            lambda: f64,
+            c: *mut gsl_vector,
+            rnorm: *mut f64,
+            snorm: *mut f64,
+            arg1: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int,
+    >,
+    pub rcond: ::std::option::Option<
+        unsafe extern "C" fn(
+            rcond: *mut f64,
+            arg1: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int,
+    >,
+    pub lcurve: ::std::option::Option<
+        unsafe extern "C" fn(
+            reg_param: *mut gsl_vector,
+            rho: *mut gsl_vector,
+            eta: *mut gsl_vector,
+            arg1: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int,
+    >,
+    pub matrix_ptr: ::std::option::Option<
+        unsafe extern "C" fn(arg1: *const ::std::os::raw::c_void) -> *const gsl_matrix,
+    >,
+    pub rhs_ptr: ::std::option::Option<
+        unsafe extern "C" fn(arg1: *const ::std::os::raw::c_void) -> *const gsl_vector,
+    >,
+    pub free: ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct gsl_multilarge_linear_workspace {
+    pub type_: *const gsl_multilarge_linear_type,
+    pub state: *mut ::std::os::raw::c_void,
     pub p: usize,
-    pub A: *mut gsl_matrix,
-    pub Q: *mut gsl_matrix,
-    pub QSI: *mut gsl_matrix,
-    pub S: *mut gsl_vector,
-    pub t: *mut gsl_vector,
-    pub xt: *mut gsl_vector,
-    pub D: *mut gsl_vector,
-    pub rcond: f64,
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_alloc(n: usize, p: usize) -> *mut gsl_multifit_linear_workspace;
+    pub static mut gsl_multilarge_linear_normal: *const gsl_multilarge_linear_type;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_free(w: *mut gsl_multifit_linear_workspace);
+    pub static mut gsl_multilarge_linear_tsqr: *const gsl_multilarge_linear_type;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear(
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
-        c: *mut gsl_vector,
-        cov: *mut gsl_matrix,
-        chisq: *mut f64,
-        work: *mut gsl_multifit_linear_workspace,
+    pub fn gsl_multilarge_linear_alloc(
+        T: *const gsl_multilarge_linear_type,
+        p: usize,
+    ) -> *mut gsl_multilarge_linear_workspace;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multilarge_linear_free(w: *mut gsl_multilarge_linear_workspace);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multilarge_linear_name(
+        w: *const gsl_multilarge_linear_workspace,
+    ) -> *const ::std::os::raw::c_char;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multilarge_linear_reset(
+        w: *mut gsl_multilarge_linear_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_tsvd(
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
-        tol: f64,
-        c: *mut gsl_vector,
-        cov: *mut gsl_matrix,
-        chisq: *mut f64,
-        rank: *mut usize,
-        work: *mut gsl_multifit_linear_workspace,
+    pub fn gsl_multilarge_linear_accumulate(
+        X: *mut gsl_matrix,
+        y: *mut gsl_vector,
+        w: *mut gsl_multilarge_linear_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_svd(
-        X: *const gsl_matrix,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_bsvd(
-        X: *const gsl_matrix,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_rank(tol: f64, work: *const gsl_multifit_linear_workspace) -> usize;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_solve(
+    pub fn gsl_multilarge_linear_solve(
         lambda: f64,
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
         c: *mut gsl_vector,
         rnorm: *mut f64,
         snorm: *mut f64,
-        work: *mut gsl_multifit_linear_workspace,
+        w: *mut gsl_multilarge_linear_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_applyW(
-        X: *const gsl_matrix,
-        w: *const gsl_vector,
-        y: *const gsl_vector,
-        WX: *mut gsl_matrix,
-        Wy: *mut gsl_vector,
+    pub fn gsl_multilarge_linear_rcond(
+        rcond: *mut f64,
+        w: *mut gsl_multilarge_linear_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_stdform1(
-        L: *const gsl_vector,
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
-        Xs: *mut gsl_matrix,
-        ys: *mut gsl_vector,
-        work: *mut gsl_multifit_linear_workspace,
+    pub fn gsl_multilarge_linear_lcurve(
+        reg_param: *mut gsl_vector,
+        rho: *mut gsl_vector,
+        eta: *mut gsl_vector,
+        w: *mut gsl_multilarge_linear_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_wstdform1(
+    pub fn gsl_multilarge_linear_wstdform1(
         L: *const gsl_vector,
         X: *const gsl_matrix,
         w: *const gsl_vector,
         y: *const gsl_vector,
         Xs: *mut gsl_matrix,
         ys: *mut gsl_vector,
-        work: *mut gsl_multifit_linear_workspace,
+        work: *mut gsl_multilarge_linear_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_L_decomp(
+    pub fn gsl_multilarge_linear_stdform1(
+        L: *const gsl_vector,
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        Xs: *mut gsl_matrix,
+        ys: *mut gsl_vector,
+        work: *mut gsl_multilarge_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multilarge_linear_L_decomp(
         L: *mut gsl_matrix,
         tau: *mut gsl_vector,
     ) -> ::std::os::raw::c_int;
@@ -26803,21 +27417,7 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_stdform2(
-        LQR: *const gsl_matrix,
-        Ltau: *const gsl_vector,
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
-        Xs: *mut gsl_matrix,
-        ys: *mut gsl_vector,
-        M: *mut gsl_matrix,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_wstdform2(
+    pub fn gsl_multilarge_linear_wstdform2(
         LQR: *const gsl_matrix,
         Ltau: *const gsl_vector,
         X: *const gsl_matrix,
@@ -26825,433 +27425,56 @@ unsafe extern "C" {
         y: *const gsl_vector,
         Xs: *mut gsl_matrix,
         ys: *mut gsl_vector,
-        M: *mut gsl_matrix,
-        work: *mut gsl_multifit_linear_workspace,
+        work: *mut gsl_multilarge_linear_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_genform1(
+    pub fn gsl_multilarge_linear_stdform2(
+        LQR: *const gsl_matrix,
+        Ltau: *const gsl_vector,
+        X: *const gsl_matrix,
+        y: *const gsl_vector,
+        Xs: *mut gsl_matrix,
+        ys: *mut gsl_vector,
+        work: *mut gsl_multilarge_linear_workspace,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_multilarge_linear_genform1(
         L: *const gsl_vector,
         cs: *const gsl_vector,
         c: *mut gsl_vector,
-        work: *mut gsl_multifit_linear_workspace,
+        work: *mut gsl_multilarge_linear_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_genform2(
+    pub fn gsl_multilarge_linear_genform2(
         LQR: *const gsl_matrix,
         Ltau: *const gsl_vector,
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
         cs: *const gsl_vector,
-        M: *const gsl_matrix,
         c: *mut gsl_vector,
-        work: *mut gsl_multifit_linear_workspace,
+        work: *mut gsl_multilarge_linear_workspace,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_wgenform2(
-        LQR: *const gsl_matrix,
-        Ltau: *const gsl_vector,
-        X: *const gsl_matrix,
-        w: *const gsl_vector,
-        y: *const gsl_vector,
-        cs: *const gsl_vector,
-        M: *const gsl_matrix,
-        c: *mut gsl_vector,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
+    pub fn gsl_multilarge_linear_matrix_ptr(
+        work: *const gsl_multilarge_linear_workspace,
+    ) -> *const gsl_matrix;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_multifit_linear_lreg(
-        smin: f64,
-        smax: f64,
-        reg_param: *mut gsl_vector,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_lcurve(
-        y: *const gsl_vector,
-        reg_param: *mut gsl_vector,
-        rho: *mut gsl_vector,
-        eta: *mut gsl_vector,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_lcurvature(
-        y: *const gsl_vector,
-        reg_param: *const gsl_vector,
-        rho: *const gsl_vector,
-        eta: *const gsl_vector,
-        kappa: *mut gsl_vector,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_lcurvature_menger(
-        rho: *const gsl_vector,
-        eta: *const gsl_vector,
-        kappa: *mut gsl_vector,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_lcorner(
-        rho: *const gsl_vector,
-        eta: *const gsl_vector,
-        idx: *mut usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_lcorner2(
-        reg_param: *const gsl_vector,
-        eta: *const gsl_vector,
-        idx: *mut usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_Lk(p: usize, k: usize, L: *mut gsl_matrix) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_Lsobolev(
-        p: usize,
-        kmax: usize,
-        alpha: *const gsl_vector,
-        L: *mut gsl_matrix,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_wlinear(
-        X: *const gsl_matrix,
-        w: *const gsl_vector,
-        y: *const gsl_vector,
-        c: *mut gsl_vector,
-        cov: *mut gsl_matrix,
-        chisq: *mut f64,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_wlinear_tsvd(
-        X: *const gsl_matrix,
-        w: *const gsl_vector,
-        y: *const gsl_vector,
-        tol: f64,
-        c: *mut gsl_vector,
-        cov: *mut gsl_matrix,
-        chisq: *mut f64,
-        rank: *mut usize,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_wlinear_svd(
-        X: *const gsl_matrix,
-        w: *const gsl_vector,
-        y: *const gsl_vector,
-        tol: f64,
-        rank: *mut usize,
-        c: *mut gsl_vector,
-        cov: *mut gsl_matrix,
-        chisq: *mut f64,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_wlinear_usvd(
-        X: *const gsl_matrix,
-        w: *const gsl_vector,
-        y: *const gsl_vector,
-        tol: f64,
-        rank: *mut usize,
-        c: *mut gsl_vector,
-        cov: *mut gsl_matrix,
-        chisq: *mut f64,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_est(
-        x: *const gsl_vector,
-        c: *const gsl_vector,
-        cov: *const gsl_matrix,
-        y: *mut f64,
-        y_err: *mut f64,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_rcond(w: *const gsl_multifit_linear_workspace) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_residuals(
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
-        c: *const gsl_vector,
-        r: *mut gsl_vector,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_gcv_init(
-        y: *const gsl_vector,
-        reg_param: *mut gsl_vector,
-        UTy: *mut gsl_vector,
-        delta0: *mut f64,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_gcv_curve(
-        reg_param: *const gsl_vector,
-        UTy: *const gsl_vector,
-        delta0: f64,
-        G: *mut gsl_vector,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_gcv_min(
-        reg_param: *const gsl_vector,
-        UTy: *const gsl_vector,
-        G: *const gsl_vector,
-        delta0: f64,
-        lambda: *mut f64,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_gcv_calc(
-        lambda: f64,
-        UTy: *const gsl_vector,
-        delta0: f64,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_linear_gcv(
-        y: *const gsl_vector,
-        reg_param: *mut gsl_vector,
-        G: *mut gsl_vector,
-        lambda: *mut f64,
-        G_lambda: *mut f64,
-        work: *mut gsl_multifit_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct gsl_multifit_robust_type {
-    pub name: *const ::std::os::raw::c_char,
-    pub wfun: ::std::option::Option<
-        unsafe extern "C" fn(r: *const gsl_vector, w: *mut gsl_vector) -> ::std::os::raw::c_int,
-    >,
-    pub psi_deriv: ::std::option::Option<
-        unsafe extern "C" fn(r: *const gsl_vector, dpsi: *mut gsl_vector) -> ::std::os::raw::c_int,
-    >,
-    pub tuning_default: f64,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct gsl_multifit_robust_stats {
-    pub sigma_ols: f64,
-    pub sigma_mad: f64,
-    pub sigma_rob: f64,
-    pub sigma: f64,
-    pub Rsq: f64,
-    pub adj_Rsq: f64,
-    pub rmse: f64,
-    pub sse: f64,
-    pub dof: usize,
-    pub numit: usize,
-    pub weights: *mut gsl_vector,
-    pub r: *mut gsl_vector,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct gsl_multifit_robust_workspace {
-    pub n: usize,
-    pub p: usize,
-    pub numit: usize,
-    pub maxiter: usize,
-    pub type_: *const gsl_multifit_robust_type,
-    pub tune: f64,
-    pub r: *mut gsl_vector,
-    pub weights: *mut gsl_vector,
-    pub c_prev: *mut gsl_vector,
-    pub resfac: *mut gsl_vector,
-    pub psi: *mut gsl_vector,
-    pub dpsi: *mut gsl_vector,
-    pub QSI: *mut gsl_matrix,
-    pub D: *mut gsl_vector,
-    pub workn: *mut gsl_vector,
-    pub stats: gsl_multifit_robust_stats,
-    pub multifit_p: *mut gsl_multifit_linear_workspace,
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub static mut gsl_multifit_robust_default: *const gsl_multifit_robust_type;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub static mut gsl_multifit_robust_bisquare: *const gsl_multifit_robust_type;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub static mut gsl_multifit_robust_cauchy: *const gsl_multifit_robust_type;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub static mut gsl_multifit_robust_fair: *const gsl_multifit_robust_type;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub static mut gsl_multifit_robust_huber: *const gsl_multifit_robust_type;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub static mut gsl_multifit_robust_ols: *const gsl_multifit_robust_type;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub static mut gsl_multifit_robust_welsch: *const gsl_multifit_robust_type;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_robust_alloc(
-        T: *const gsl_multifit_robust_type,
-        n: usize,
-        p: usize,
-    ) -> *mut gsl_multifit_robust_workspace;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_robust_free(w: *mut gsl_multifit_robust_workspace);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_robust_tune(
-        tune: f64,
-        w: *mut gsl_multifit_robust_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_robust_maxiter(
-        maxiter: usize,
-        w: *mut gsl_multifit_robust_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_robust_name(
-        w: *const gsl_multifit_robust_workspace,
-    ) -> *const ::std::os::raw::c_char;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_robust_statistics(
-        w: *const gsl_multifit_robust_workspace,
-    ) -> gsl_multifit_robust_stats;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_robust_weights(
-        r: *const gsl_vector,
-        wts: *mut gsl_vector,
-        w: *mut gsl_multifit_robust_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_robust(
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
-        c: *mut gsl_vector,
-        cov: *mut gsl_matrix,
-        w: *mut gsl_multifit_robust_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_robust_est(
-        x: *const gsl_vector,
-        c: *const gsl_vector,
-        cov: *const gsl_matrix,
-        y: *mut f64,
-        y_err: *mut f64,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multifit_robust_residuals(
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
-        c: *const gsl_vector,
-        r: *mut gsl_vector,
-        w: *mut gsl_multifit_robust_workspace,
-    ) -> ::std::os::raw::c_int;
+    pub fn gsl_multilarge_linear_rhs_ptr(
+        work: *const gsl_multilarge_linear_workspace,
+    ) -> *const gsl_vector;
 }
 pub const gsl_multilarge_nlinear_fdtype_GSL_MULTILARGE_NLINEAR_FWDIFF:
     gsl_multilarge_nlinear_fdtype = 0;
@@ -27768,229 +27991,6 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
     pub static mut gsl_multilarge_nlinear_solver_none: *const gsl_multilarge_nlinear_solver;
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct gsl_multilarge_linear_type {
-    pub name: *const ::std::os::raw::c_char,
-    pub alloc: ::std::option::Option<unsafe extern "C" fn(p: usize) -> *mut ::std::os::raw::c_void>,
-    pub reset: ::std::option::Option<
-        unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
-    >,
-    pub accumulate: ::std::option::Option<
-        unsafe extern "C" fn(
-            X: *mut gsl_matrix,
-            y: *mut gsl_vector,
-            arg1: *mut ::std::os::raw::c_void,
-        ) -> ::std::os::raw::c_int,
-    >,
-    pub solve: ::std::option::Option<
-        unsafe extern "C" fn(
-            lambda: f64,
-            c: *mut gsl_vector,
-            rnorm: *mut f64,
-            snorm: *mut f64,
-            arg1: *mut ::std::os::raw::c_void,
-        ) -> ::std::os::raw::c_int,
-    >,
-    pub rcond: ::std::option::Option<
-        unsafe extern "C" fn(
-            rcond: *mut f64,
-            arg1: *mut ::std::os::raw::c_void,
-        ) -> ::std::os::raw::c_int,
-    >,
-    pub lcurve: ::std::option::Option<
-        unsafe extern "C" fn(
-            reg_param: *mut gsl_vector,
-            rho: *mut gsl_vector,
-            eta: *mut gsl_vector,
-            arg1: *mut ::std::os::raw::c_void,
-        ) -> ::std::os::raw::c_int,
-    >,
-    pub matrix_ptr: ::std::option::Option<
-        unsafe extern "C" fn(arg1: *const ::std::os::raw::c_void) -> *const gsl_matrix,
-    >,
-    pub rhs_ptr: ::std::option::Option<
-        unsafe extern "C" fn(arg1: *const ::std::os::raw::c_void) -> *const gsl_vector,
-    >,
-    pub free: ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct gsl_multilarge_linear_workspace {
-    pub type_: *const gsl_multilarge_linear_type,
-    pub state: *mut ::std::os::raw::c_void,
-    pub p: usize,
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub static mut gsl_multilarge_linear_normal: *const gsl_multilarge_linear_type;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub static mut gsl_multilarge_linear_tsqr: *const gsl_multilarge_linear_type;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_alloc(
-        T: *const gsl_multilarge_linear_type,
-        p: usize,
-    ) -> *mut gsl_multilarge_linear_workspace;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_free(w: *mut gsl_multilarge_linear_workspace);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_name(
-        w: *const gsl_multilarge_linear_workspace,
-    ) -> *const ::std::os::raw::c_char;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_reset(
-        w: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_accumulate(
-        X: *mut gsl_matrix,
-        y: *mut gsl_vector,
-        w: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_solve(
-        lambda: f64,
-        c: *mut gsl_vector,
-        rnorm: *mut f64,
-        snorm: *mut f64,
-        w: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_rcond(
-        rcond: *mut f64,
-        w: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_lcurve(
-        reg_param: *mut gsl_vector,
-        rho: *mut gsl_vector,
-        eta: *mut gsl_vector,
-        w: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_wstdform1(
-        L: *const gsl_vector,
-        X: *const gsl_matrix,
-        w: *const gsl_vector,
-        y: *const gsl_vector,
-        Xs: *mut gsl_matrix,
-        ys: *mut gsl_vector,
-        work: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_stdform1(
-        L: *const gsl_vector,
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
-        Xs: *mut gsl_matrix,
-        ys: *mut gsl_vector,
-        work: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_L_decomp(
-        L: *mut gsl_matrix,
-        tau: *mut gsl_vector,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_wstdform2(
-        LQR: *const gsl_matrix,
-        Ltau: *const gsl_vector,
-        X: *const gsl_matrix,
-        w: *const gsl_vector,
-        y: *const gsl_vector,
-        Xs: *mut gsl_matrix,
-        ys: *mut gsl_vector,
-        work: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_stdform2(
-        LQR: *const gsl_matrix,
-        Ltau: *const gsl_vector,
-        X: *const gsl_matrix,
-        y: *const gsl_vector,
-        Xs: *mut gsl_matrix,
-        ys: *mut gsl_vector,
-        work: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_genform1(
-        L: *const gsl_vector,
-        cs: *const gsl_vector,
-        c: *mut gsl_vector,
-        work: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_genform2(
-        LQR: *const gsl_matrix,
-        Ltau: *const gsl_vector,
-        cs: *const gsl_vector,
-        c: *mut gsl_vector,
-        work: *mut gsl_multilarge_linear_workspace,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_matrix_ptr(
-        work: *const gsl_multilarge_linear_workspace,
-    ) -> *const gsl_matrix;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_multilarge_linear_rhs_ptr(
-        work: *const gsl_multilarge_linear_workspace,
-    ) -> *const gsl_vector;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -29561,9 +29561,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_char(
+    pub fn gsl_permute_complex_long_double(
         p: *const usize,
-        data: *mut ::std::os::raw::c_char,
+        data: *mut f64,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -29571,9 +29571,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_char_inverse(
+    pub fn gsl_permute_complex_long_double_inverse(
         p: *const usize,
-        data: *mut ::std::os::raw::c_char,
+        data: *mut f64,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -29621,7 +29621,7 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_complex_long_double(
+    pub fn gsl_permute_long_double(
         p: *const usize,
         data: *mut f64,
         stride: usize,
@@ -29631,7 +29631,7 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_complex_long_double_inverse(
+    pub fn gsl_permute_long_double_inverse(
         p: *const usize,
         data: *mut f64,
         stride: usize,
@@ -29681,9 +29681,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_int(
+    pub fn gsl_permute_ulong(
         p: *const usize,
-        data: *mut ::std::os::raw::c_int,
+        data: *mut ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -29691,29 +29691,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_int_inverse(
+    pub fn gsl_permute_ulong_inverse(
         p: *const usize,
-        data: *mut ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_long_double(
-        p: *const usize,
-        data: *mut f64,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_long_double_inverse(
-        p: *const usize,
-        data: *mut f64,
+        data: *mut ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -29741,113 +29721,61 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_matrix_char(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_char,
+    pub fn gsl_permute_uint(
+        p: *const usize,
+        data: *mut ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_matrix_complex(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_complex,
+    pub fn gsl_permute_uint_inverse(
+        p: *const usize,
+        data: *mut ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_matrix_complex_float(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_complex_float,
+    pub fn gsl_permute_int(
+        p: *const usize,
+        data: *mut ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_matrix_complex_long_double(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_complex_long_double,
+    pub fn gsl_permute_int_inverse(
+        p: *const usize,
+        data: *mut ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_matrix(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix,
+    pub fn gsl_permute_ushort(
+        p: *const usize,
+        data: *mut ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_matrix_float(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_float,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_matrix_int(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_int,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_matrix_long_double(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_long_double,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_matrix_long(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_long,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_matrix_short(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_short,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_matrix_uchar(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_uchar,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_matrix_uint(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_uint,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_matrix_ulong(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_ulong,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_matrix_ushort(
-        p: *const gsl_permutation,
-        A: *mut gsl_matrix_ushort,
+    pub fn gsl_permute_ushort_inverse(
+        p: *const usize,
+        data: *mut ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
@@ -29893,9 +29821,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_uint(
+    pub fn gsl_permute_char(
         p: *const usize,
-        data: *mut ::std::os::raw::c_uint,
+        data: *mut ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -29903,9 +29831,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_uint_inverse(
+    pub fn gsl_permute_char_inverse(
         p: *const usize,
-        data: *mut ::std::os::raw::c_uint,
+        data: *mut ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -29913,57 +29841,129 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_ulong(
-        p: *const usize,
-        data: *mut ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_ulong_inverse(
-        p: *const usize,
-        data: *mut ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_ushort(
-        p: *const usize,
-        data: *mut ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_ushort_inverse(
-        p: *const usize,
-        data: *mut ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_vector_char(
+    pub fn gsl_permute_matrix_complex_long_double(
         p: *const gsl_permutation,
-        v: *mut gsl_vector_char,
+        A: *mut gsl_matrix_complex_long_double,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_vector_char_inverse(
+    pub fn gsl_permute_matrix_complex(
         p: *const gsl_permutation,
-        v: *mut gsl_vector_char,
+        A: *mut gsl_matrix_complex,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_complex_float(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_complex_float,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_long_double(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_long_double,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_float(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_float,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_ulong(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_ulong,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_long(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_long,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_uint(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_uint,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_int(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_ushort(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_ushort,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_short(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_short,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_uchar(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_uchar,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_matrix_char(
+        p: *const gsl_permutation,
+        A: *mut gsl_matrix_char,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_vector_complex_long_double(
+        p: *const gsl_permutation,
+        v: *mut gsl_vector_complex_long_double,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_vector_complex_long_double_inverse(
+        p: *const gsl_permutation,
+        v: *mut gsl_vector_complex_long_double,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
@@ -30001,17 +30001,17 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_vector_complex_long_double(
+    pub fn gsl_permute_vector_long_double(
         p: *const gsl_permutation,
-        v: *mut gsl_vector_complex_long_double,
+        v: *mut gsl_vector_long_double,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_vector_complex_long_double_inverse(
+    pub fn gsl_permute_vector_long_double_inverse(
         p: *const gsl_permutation,
-        v: *mut gsl_vector_complex_long_double,
+        v: *mut gsl_vector_long_double,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
@@ -30049,33 +30049,17 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_vector_int(
+    pub fn gsl_permute_vector_ulong(
         p: *const gsl_permutation,
-        v: *mut gsl_vector_int,
+        v: *mut gsl_vector_ulong,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_vector_int_inverse(
+    pub fn gsl_permute_vector_ulong_inverse(
         p: *const gsl_permutation,
-        v: *mut gsl_vector_int,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_vector_long_double(
-        p: *const gsl_permutation,
-        v: *mut gsl_vector_long_double,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_vector_long_double_inverse(
-        p: *const gsl_permutation,
-        v: *mut gsl_vector_long_double,
+        v: *mut gsl_vector_ulong,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
@@ -30092,6 +30076,54 @@ unsafe extern "C" {
     pub fn gsl_permute_vector_long_inverse(
         p: *const gsl_permutation,
         v: *mut gsl_vector_long,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_vector_uint(
+        p: *const gsl_permutation,
+        v: *mut gsl_vector_uint,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_vector_uint_inverse(
+        p: *const gsl_permutation,
+        v: *mut gsl_vector_uint,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_vector_int(
+        p: *const gsl_permutation,
+        v: *mut gsl_vector_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_vector_int_inverse(
+        p: *const gsl_permutation,
+        v: *mut gsl_vector_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_vector_ushort(
+        p: *const gsl_permutation,
+        v: *mut gsl_vector_ushort,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_permute_vector_ushort_inverse(
+        p: *const gsl_permutation,
+        v: *mut gsl_vector_ushort,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
@@ -30129,49 +30161,17 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_vector_uint(
+    pub fn gsl_permute_vector_char(
         p: *const gsl_permutation,
-        v: *mut gsl_vector_uint,
+        v: *mut gsl_vector_char,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_permute_vector_uint_inverse(
+    pub fn gsl_permute_vector_char_inverse(
         p: *const gsl_permutation,
-        v: *mut gsl_vector_uint,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_vector_ulong(
-        p: *const gsl_permutation,
-        v: *mut gsl_vector_ulong,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_vector_ulong_inverse(
-        p: *const gsl_permutation,
-        v: *mut gsl_vector_ulong,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_vector_ushort(
-        p: *const gsl_permutation,
-        v: *mut gsl_vector_ushort,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_permute_vector_ushort_inverse(
-        p: *const gsl_permutation,
-        v: *mut gsl_vector_ushort,
+        v: *mut gsl_vector_char,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
@@ -32285,130 +32285,6 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sf_hydrogenicR_1_e(
-        Z: f64,
-        r: f64,
-        result: *mut gsl_sf_result,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sf_hydrogenicR_1(Z: f64, r: f64) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sf_hydrogenicR_e(
-        n: ::std::os::raw::c_int,
-        l: ::std::os::raw::c_int,
-        Z: f64,
-        r: f64,
-        result: *mut gsl_sf_result,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sf_hydrogenicR(
-        n: ::std::os::raw::c_int,
-        l: ::std::os::raw::c_int,
-        Z: f64,
-        r: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sf_coulomb_wave_FG_e(
-        eta: f64,
-        x: f64,
-        lam_F: f64,
-        k_lam_G: ::std::os::raw::c_int,
-        F: *mut gsl_sf_result,
-        Fp: *mut gsl_sf_result,
-        G: *mut gsl_sf_result,
-        Gp: *mut gsl_sf_result,
-        exp_F: *mut f64,
-        exp_G: *mut f64,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sf_coulomb_wave_F_array(
-        lam_min: f64,
-        kmax: ::std::os::raw::c_int,
-        eta: f64,
-        x: f64,
-        fc_array: *mut f64,
-        F_exponent: *mut f64,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sf_coulomb_wave_FG_array(
-        lam_min: f64,
-        kmax: ::std::os::raw::c_int,
-        eta: f64,
-        x: f64,
-        fc_array: *mut f64,
-        gc_array: *mut f64,
-        F_exponent: *mut f64,
-        G_exponent: *mut f64,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sf_coulomb_wave_FGp_array(
-        lam_min: f64,
-        kmax: ::std::os::raw::c_int,
-        eta: f64,
-        x: f64,
-        fc_array: *mut f64,
-        fcp_array: *mut f64,
-        gc_array: *mut f64,
-        gcp_array: *mut f64,
-        F_exponent: *mut f64,
-        G_exponent: *mut f64,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sf_coulomb_wave_sphF_array(
-        lam_min: f64,
-        kmax: ::std::os::raw::c_int,
-        eta: f64,
-        x: f64,
-        fc_array: *mut f64,
-        F_exponent: *mut f64,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sf_coulomb_CL_e(
-        L: f64,
-        eta: f64,
-        result: *mut gsl_sf_result,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sf_coulomb_CL_array(
-        Lmin: f64,
-        kmax: ::std::os::raw::c_int,
-        eta: f64,
-        cl: *mut f64,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
     pub fn gsl_sf_coupling_3j_e(
         two_ja: ::std::os::raw::c_int,
         two_jb: ::std::os::raw::c_int,
@@ -32536,6 +32412,130 @@ unsafe extern "C" {
         two_je: ::std::os::raw::c_int,
         two_jf: ::std::os::raw::c_int,
     ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_hydrogenicR_1_e(
+        Z: f64,
+        r: f64,
+        result: *mut gsl_sf_result,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_hydrogenicR_1(Z: f64, r: f64) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_hydrogenicR_e(
+        n: ::std::os::raw::c_int,
+        l: ::std::os::raw::c_int,
+        Z: f64,
+        r: f64,
+        result: *mut gsl_sf_result,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_hydrogenicR(
+        n: ::std::os::raw::c_int,
+        l: ::std::os::raw::c_int,
+        Z: f64,
+        r: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_coulomb_wave_FG_e(
+        eta: f64,
+        x: f64,
+        lam_F: f64,
+        k_lam_G: ::std::os::raw::c_int,
+        F: *mut gsl_sf_result,
+        Fp: *mut gsl_sf_result,
+        G: *mut gsl_sf_result,
+        Gp: *mut gsl_sf_result,
+        exp_F: *mut f64,
+        exp_G: *mut f64,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_coulomb_wave_F_array(
+        lam_min: f64,
+        kmax: ::std::os::raw::c_int,
+        eta: f64,
+        x: f64,
+        fc_array: *mut f64,
+        F_exponent: *mut f64,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_coulomb_wave_FG_array(
+        lam_min: f64,
+        kmax: ::std::os::raw::c_int,
+        eta: f64,
+        x: f64,
+        fc_array: *mut f64,
+        gc_array: *mut f64,
+        F_exponent: *mut f64,
+        G_exponent: *mut f64,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_coulomb_wave_FGp_array(
+        lam_min: f64,
+        kmax: ::std::os::raw::c_int,
+        eta: f64,
+        x: f64,
+        fc_array: *mut f64,
+        fcp_array: *mut f64,
+        gc_array: *mut f64,
+        gcp_array: *mut f64,
+        F_exponent: *mut f64,
+        G_exponent: *mut f64,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_coulomb_wave_sphF_array(
+        lam_min: f64,
+        kmax: ::std::os::raw::c_int,
+        eta: f64,
+        x: f64,
+        fc_array: *mut f64,
+        F_exponent: *mut f64,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_coulomb_CL_e(
+        L: f64,
+        eta: f64,
+        result: *mut gsl_sf_result,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sf_coulomb_CL_array(
+        Lmin: f64,
+        kmax: ::std::os::raw::c_int,
+        eta: f64,
+        cl: *mut f64,
+    ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
@@ -35466,15 +35466,15 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_char(data: *mut ::std::os::raw::c_char, stride: usize, n: usize);
+    pub fn gsl_sort_long_double(data: *mut f64, stride: usize, n: usize);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort2_char(
-        data1: *mut ::std::os::raw::c_char,
+    pub fn gsl_sort2_long_double(
+        data1: *mut f64,
         stride1: usize,
-        data2: *mut ::std::os::raw::c_char,
+        data2: *mut f64,
         stride2: usize,
         n: usize,
     );
@@ -35482,20 +35482,15 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_char_index(
-        p: *mut usize,
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-    );
+    pub fn gsl_sort_long_double_index(p: *mut usize, data: *const f64, stride: usize, n: usize);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_char_smallest(
-        dest: *mut ::std::os::raw::c_char,
+    pub fn gsl_sort_long_double_smallest(
+        dest: *mut f64,
         k: usize,
-        src: *const ::std::os::raw::c_char,
+        src: *const f64,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -35503,10 +35498,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_char_smallest_index(
+    pub fn gsl_sort_long_double_smallest_index(
         p: *mut usize,
         k: usize,
-        src: *const ::std::os::raw::c_char,
+        src: *const f64,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -35514,10 +35509,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_char_largest(
-        dest: *mut ::std::os::raw::c_char,
+    pub fn gsl_sort_long_double_largest(
+        dest: *mut f64,
         k: usize,
-        src: *const ::std::os::raw::c_char,
+        src: *const f64,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -35525,10 +35520,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_char_largest_index(
+    pub fn gsl_sort_long_double_largest_index(
         p: *mut usize,
         k: usize,
-        src: *const ::std::os::raw::c_char,
+        src: *const f64,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -35660,15 +35655,15 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_int(data: *mut ::std::os::raw::c_int, stride: usize, n: usize);
+    pub fn gsl_sort_ulong(data: *mut ::std::os::raw::c_ulong, stride: usize, n: usize);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort2_int(
-        data1: *mut ::std::os::raw::c_int,
+    pub fn gsl_sort2_ulong(
+        data1: *mut ::std::os::raw::c_ulong,
         stride1: usize,
-        data2: *mut ::std::os::raw::c_int,
+        data2: *mut ::std::os::raw::c_ulong,
         stride2: usize,
         n: usize,
     );
@@ -35676,9 +35671,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_int_index(
+    pub fn gsl_sort_ulong_index(
         p: *mut usize,
-        data: *const ::std::os::raw::c_int,
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     );
@@ -35686,10 +35681,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_int_smallest(
-        dest: *mut ::std::os::raw::c_int,
+    pub fn gsl_sort_ulong_smallest(
+        dest: *mut ::std::os::raw::c_ulong,
         k: usize,
-        src: *const ::std::os::raw::c_int,
+        src: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -35697,10 +35692,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_int_smallest_index(
+    pub fn gsl_sort_ulong_smallest_index(
         p: *mut usize,
         k: usize,
-        src: *const ::std::os::raw::c_int,
+        src: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -35708,10 +35703,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_int_largest(
-        dest: *mut ::std::os::raw::c_int,
+    pub fn gsl_sort_ulong_largest(
+        dest: *mut ::std::os::raw::c_ulong,
         k: usize,
-        src: *const ::std::os::raw::c_int,
+        src: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -35719,75 +35714,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_int_largest_index(
+    pub fn gsl_sort_ulong_largest_index(
         p: *mut usize,
         k: usize,
-        src: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_long_double(data: *mut f64, stride: usize, n: usize);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort2_long_double(
-        data1: *mut f64,
-        stride1: usize,
-        data2: *mut f64,
-        stride2: usize,
-        n: usize,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_long_double_index(p: *mut usize, data: *const f64, stride: usize, n: usize);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_long_double_smallest(
-        dest: *mut f64,
-        k: usize,
-        src: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_long_double_smallest_index(
-        p: *mut usize,
-        k: usize,
-        src: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_long_double_largest(
-        dest: *mut f64,
-        k: usize,
-        src: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_long_double_largest_index(
-        p: *mut usize,
-        k: usize,
-        src: *const f64,
+        src: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -35858,6 +35788,216 @@ unsafe extern "C" {
         p: *mut usize,
         k: usize,
         src: *const ::std::os::raw::c_long,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_uint(data: *mut ::std::os::raw::c_uint, stride: usize, n: usize);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort2_uint(
+        data1: *mut ::std::os::raw::c_uint,
+        stride1: usize,
+        data2: *mut ::std::os::raw::c_uint,
+        stride2: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_uint_index(
+        p: *mut usize,
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_uint_smallest(
+        dest: *mut ::std::os::raw::c_uint,
+        k: usize,
+        src: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_uint_smallest_index(
+        p: *mut usize,
+        k: usize,
+        src: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_uint_largest(
+        dest: *mut ::std::os::raw::c_uint,
+        k: usize,
+        src: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_uint_largest_index(
+        p: *mut usize,
+        k: usize,
+        src: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_int(data: *mut ::std::os::raw::c_int, stride: usize, n: usize);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort2_int(
+        data1: *mut ::std::os::raw::c_int,
+        stride1: usize,
+        data2: *mut ::std::os::raw::c_int,
+        stride2: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_int_index(
+        p: *mut usize,
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_int_smallest(
+        dest: *mut ::std::os::raw::c_int,
+        k: usize,
+        src: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_int_smallest_index(
+        p: *mut usize,
+        k: usize,
+        src: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_int_largest(
+        dest: *mut ::std::os::raw::c_int,
+        k: usize,
+        src: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_int_largest_index(
+        p: *mut usize,
+        k: usize,
+        src: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_ushort(data: *mut ::std::os::raw::c_ushort, stride: usize, n: usize);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort2_ushort(
+        data1: *mut ::std::os::raw::c_ushort,
+        stride1: usize,
+        data2: *mut ::std::os::raw::c_ushort,
+        stride2: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_ushort_index(
+        p: *mut usize,
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_ushort_smallest(
+        dest: *mut ::std::os::raw::c_ushort,
+        k: usize,
+        src: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_ushort_smallest_index(
+        p: *mut usize,
+        k: usize,
+        src: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_ushort_largest(
+        dest: *mut ::std::os::raw::c_ushort,
+        k: usize,
+        src: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_ushort_largest_index(
+        p: *mut usize,
+        k: usize,
+        src: *const ::std::os::raw::c_ushort,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -36005,15 +36145,15 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_uint(data: *mut ::std::os::raw::c_uint, stride: usize, n: usize);
+    pub fn gsl_sort_char(data: *mut ::std::os::raw::c_char, stride: usize, n: usize);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort2_uint(
-        data1: *mut ::std::os::raw::c_uint,
+    pub fn gsl_sort2_char(
+        data1: *mut ::std::os::raw::c_char,
         stride1: usize,
-        data2: *mut ::std::os::raw::c_uint,
+        data2: *mut ::std::os::raw::c_char,
         stride2: usize,
         n: usize,
     );
@@ -36021,9 +36161,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_uint_index(
+    pub fn gsl_sort_char_index(
         p: *mut usize,
-        data: *const ::std::os::raw::c_uint,
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     );
@@ -36031,10 +36171,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_uint_smallest(
-        dest: *mut ::std::os::raw::c_uint,
+    pub fn gsl_sort_char_smallest(
+        dest: *mut ::std::os::raw::c_char,
         k: usize,
-        src: *const ::std::os::raw::c_uint,
+        src: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -36042,10 +36182,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_uint_smallest_index(
+    pub fn gsl_sort_char_smallest_index(
         p: *mut usize,
         k: usize,
-        src: *const ::std::os::raw::c_uint,
+        src: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -36053,10 +36193,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_uint_largest(
-        dest: *mut ::std::os::raw::c_uint,
+    pub fn gsl_sort_char_largest(
+        dest: *mut ::std::os::raw::c_char,
         k: usize,
-        src: *const ::std::os::raw::c_uint,
+        src: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -36064,10 +36204,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_uint_largest_index(
+    pub fn gsl_sort_char_largest_index(
         p: *mut usize,
         k: usize,
-        src: *const ::std::os::raw::c_uint,
+        src: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> ::std::os::raw::c_int;
@@ -36075,195 +36215,58 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_ulong(data: *mut ::std::os::raw::c_ulong, stride: usize, n: usize);
+    pub fn gsl_sort_vector_long_double(v: *mut gsl_vector_long_double);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort2_ulong(
-        data1: *mut ::std::os::raw::c_ulong,
-        stride1: usize,
-        data2: *mut ::std::os::raw::c_ulong,
-        stride2: usize,
-        n: usize,
+    pub fn gsl_sort_vector2_long_double(
+        v1: *mut gsl_vector_long_double,
+        v2: *mut gsl_vector_long_double,
     );
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_ulong_index(
-        p: *mut usize,
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_ulong_smallest(
-        dest: *mut ::std::os::raw::c_ulong,
-        k: usize,
-        src: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_ulong_smallest_index(
-        p: *mut usize,
-        k: usize,
-        src: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_ulong_largest(
-        dest: *mut ::std::os::raw::c_ulong,
-        k: usize,
-        src: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_ulong_largest_index(
-        p: *mut usize,
-        k: usize,
-        src: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_ushort(data: *mut ::std::os::raw::c_ushort, stride: usize, n: usize);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort2_ushort(
-        data1: *mut ::std::os::raw::c_ushort,
-        stride1: usize,
-        data2: *mut ::std::os::raw::c_ushort,
-        stride2: usize,
-        n: usize,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_ushort_index(
-        p: *mut usize,
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_ushort_smallest(
-        dest: *mut ::std::os::raw::c_ushort,
-        k: usize,
-        src: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_ushort_smallest_index(
-        p: *mut usize,
-        k: usize,
-        src: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_ushort_largest(
-        dest: *mut ::std::os::raw::c_ushort,
-        k: usize,
-        src: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_ushort_largest_index(
-        p: *mut usize,
-        k: usize,
-        src: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_char(v: *mut gsl_vector_char);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector2_char(v1: *mut gsl_vector_char, v2: *mut gsl_vector_char);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_char_index(
+    pub fn gsl_sort_vector_long_double_index(
         p: *mut gsl_permutation,
-        v: *const gsl_vector_char,
+        v: *const gsl_vector_long_double,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_char_smallest(
-        dest: *mut ::std::os::raw::c_char,
+    pub fn gsl_sort_vector_long_double_smallest(
+        dest: *mut f64,
         k: usize,
-        v: *const gsl_vector_char,
+        v: *const gsl_vector_long_double,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_char_largest(
-        dest: *mut ::std::os::raw::c_char,
+    pub fn gsl_sort_vector_long_double_largest(
+        dest: *mut f64,
         k: usize,
-        v: *const gsl_vector_char,
+        v: *const gsl_vector_long_double,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_char_smallest_index(
+    pub fn gsl_sort_vector_long_double_smallest_index(
         p: *mut usize,
         k: usize,
-        v: *const gsl_vector_char,
+        v: *const gsl_vector_long_double,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_char_largest_index(
+    pub fn gsl_sort_vector_long_double_largest_index(
         p: *mut usize,
         k: usize,
-        v: *const gsl_vector_char,
+        v: *const gsl_vector_long_double,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
@@ -36377,112 +36380,55 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_int(v: *mut gsl_vector_int);
+    pub fn gsl_sort_vector_ulong(v: *mut gsl_vector_ulong);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector2_int(v1: *mut gsl_vector_int, v2: *mut gsl_vector_int);
+    pub fn gsl_sort_vector2_ulong(v1: *mut gsl_vector_ulong, v2: *mut gsl_vector_ulong);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_int_index(
+    pub fn gsl_sort_vector_ulong_index(
         p: *mut gsl_permutation,
-        v: *const gsl_vector_int,
+        v: *const gsl_vector_ulong,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_int_smallest(
-        dest: *mut ::std::os::raw::c_int,
+    pub fn gsl_sort_vector_ulong_smallest(
+        dest: *mut ::std::os::raw::c_ulong,
         k: usize,
-        v: *const gsl_vector_int,
+        v: *const gsl_vector_ulong,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_int_largest(
-        dest: *mut ::std::os::raw::c_int,
+    pub fn gsl_sort_vector_ulong_largest(
+        dest: *mut ::std::os::raw::c_ulong,
         k: usize,
-        v: *const gsl_vector_int,
+        v: *const gsl_vector_ulong,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_int_smallest_index(
+    pub fn gsl_sort_vector_ulong_smallest_index(
         p: *mut usize,
         k: usize,
-        v: *const gsl_vector_int,
+        v: *const gsl_vector_ulong,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_int_largest_index(
+    pub fn gsl_sort_vector_ulong_largest_index(
         p: *mut usize,
         k: usize,
-        v: *const gsl_vector_int,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_long_double(v: *mut gsl_vector_long_double);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector2_long_double(
-        v1: *mut gsl_vector_long_double,
-        v2: *mut gsl_vector_long_double,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_long_double_index(
-        p: *mut gsl_permutation,
-        v: *const gsl_vector_long_double,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_long_double_smallest(
-        dest: *mut f64,
-        k: usize,
-        v: *const gsl_vector_long_double,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_long_double_largest(
-        dest: *mut f64,
-        k: usize,
-        v: *const gsl_vector_long_double,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_long_double_smallest_index(
-        p: *mut usize,
-        k: usize,
-        v: *const gsl_vector_long_double,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_long_double_largest_index(
-        p: *mut usize,
-        k: usize,
-        v: *const gsl_vector_long_double,
+        v: *const gsl_vector_ulong,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
@@ -36537,6 +36483,168 @@ unsafe extern "C" {
         p: *mut usize,
         k: usize,
         v: *const gsl_vector_long,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_uint(v: *mut gsl_vector_uint);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector2_uint(v1: *mut gsl_vector_uint, v2: *mut gsl_vector_uint);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_uint_index(
+        p: *mut gsl_permutation,
+        v: *const gsl_vector_uint,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_uint_smallest(
+        dest: *mut ::std::os::raw::c_uint,
+        k: usize,
+        v: *const gsl_vector_uint,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_uint_largest(
+        dest: *mut ::std::os::raw::c_uint,
+        k: usize,
+        v: *const gsl_vector_uint,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_uint_smallest_index(
+        p: *mut usize,
+        k: usize,
+        v: *const gsl_vector_uint,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_uint_largest_index(
+        p: *mut usize,
+        k: usize,
+        v: *const gsl_vector_uint,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_int(v: *mut gsl_vector_int);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector2_int(v1: *mut gsl_vector_int, v2: *mut gsl_vector_int);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_int_index(
+        p: *mut gsl_permutation,
+        v: *const gsl_vector_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_int_smallest(
+        dest: *mut ::std::os::raw::c_int,
+        k: usize,
+        v: *const gsl_vector_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_int_largest(
+        dest: *mut ::std::os::raw::c_int,
+        k: usize,
+        v: *const gsl_vector_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_int_smallest_index(
+        p: *mut usize,
+        k: usize,
+        v: *const gsl_vector_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_int_largest_index(
+        p: *mut usize,
+        k: usize,
+        v: *const gsl_vector_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_ushort(v: *mut gsl_vector_ushort);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector2_ushort(v1: *mut gsl_vector_ushort, v2: *mut gsl_vector_ushort);
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_ushort_index(
+        p: *mut gsl_permutation,
+        v: *const gsl_vector_ushort,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_ushort_smallest(
+        dest: *mut ::std::os::raw::c_ushort,
+        k: usize,
+        v: *const gsl_vector_ushort,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_ushort_largest(
+        dest: *mut ::std::os::raw::c_ushort,
+        k: usize,
+        v: *const gsl_vector_ushort,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_ushort_smallest_index(
+        p: *mut usize,
+        k: usize,
+        v: *const gsl_vector_ushort,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_sort_vector_ushort_largest_index(
+        p: *mut usize,
+        k: usize,
+        v: *const gsl_vector_ushort,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
@@ -36650,163 +36758,55 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_uint(v: *mut gsl_vector_uint);
+    pub fn gsl_sort_vector_char(v: *mut gsl_vector_char);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector2_uint(v1: *mut gsl_vector_uint, v2: *mut gsl_vector_uint);
+    pub fn gsl_sort_vector2_char(v1: *mut gsl_vector_char, v2: *mut gsl_vector_char);
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_uint_index(
+    pub fn gsl_sort_vector_char_index(
         p: *mut gsl_permutation,
-        v: *const gsl_vector_uint,
+        v: *const gsl_vector_char,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_uint_smallest(
-        dest: *mut ::std::os::raw::c_uint,
+    pub fn gsl_sort_vector_char_smallest(
+        dest: *mut ::std::os::raw::c_char,
         k: usize,
-        v: *const gsl_vector_uint,
+        v: *const gsl_vector_char,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_uint_largest(
-        dest: *mut ::std::os::raw::c_uint,
+    pub fn gsl_sort_vector_char_largest(
+        dest: *mut ::std::os::raw::c_char,
         k: usize,
-        v: *const gsl_vector_uint,
+        v: *const gsl_vector_char,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_uint_smallest_index(
+    pub fn gsl_sort_vector_char_smallest_index(
         p: *mut usize,
         k: usize,
-        v: *const gsl_vector_uint,
+        v: *const gsl_vector_char,
     ) -> ::std::os::raw::c_int;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_sort_vector_uint_largest_index(
+    pub fn gsl_sort_vector_char_largest_index(
         p: *mut usize,
         k: usize,
-        v: *const gsl_vector_uint,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ulong(v: *mut gsl_vector_ulong);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector2_ulong(v1: *mut gsl_vector_ulong, v2: *mut gsl_vector_ulong);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ulong_index(
-        p: *mut gsl_permutation,
-        v: *const gsl_vector_ulong,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ulong_smallest(
-        dest: *mut ::std::os::raw::c_ulong,
-        k: usize,
-        v: *const gsl_vector_ulong,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ulong_largest(
-        dest: *mut ::std::os::raw::c_ulong,
-        k: usize,
-        v: *const gsl_vector_ulong,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ulong_smallest_index(
-        p: *mut usize,
-        k: usize,
-        v: *const gsl_vector_ulong,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ulong_largest_index(
-        p: *mut usize,
-        k: usize,
-        v: *const gsl_vector_ulong,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ushort(v: *mut gsl_vector_ushort);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector2_ushort(v1: *mut gsl_vector_ushort, v2: *mut gsl_vector_ushort);
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ushort_index(
-        p: *mut gsl_permutation,
-        v: *const gsl_vector_ushort,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ushort_smallest(
-        dest: *mut ::std::os::raw::c_ushort,
-        k: usize,
-        v: *const gsl_vector_ushort,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ushort_largest(
-        dest: *mut ::std::os::raw::c_ushort,
-        k: usize,
-        v: *const gsl_vector_ushort,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ushort_smallest_index(
-        p: *mut usize,
-        k: usize,
-        v: *const gsl_vector_ushort,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_sort_vector_ushort_largest_index(
-        p: *mut usize,
-        k: usize,
-        v: *const gsl_vector_ushort,
+        v: *const gsl_vector_char,
     ) -> ::std::os::raw::c_int;
 }
 pub const GSL_SPMATRIX_COO: _bindgen_ty_9 = 0;
@@ -41420,14 +41420,69 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_mean(data: *const ::std::os::raw::c_char, stride: usize, n: usize)
+    pub fn gsl_stats_long_double_mean(data: *const f64, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_variance(data: *const f64, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_sd(data: *const f64, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_variance_with_fixed_mean(
+        data: *const f64,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_sd_with_fixed_mean(
+        data: *const f64,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_tss(data: *const f64, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_tss_m(data: *const f64, stride: usize, n: usize, mean: f64)
         -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_variance(
-        data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_absdev(data: *const f64, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_skew(data: *const f64, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_kurtosis(data: *const f64, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_lag1_autocorrelation(
+        data: *const f64,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -41435,83 +41490,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_sd(data: *const ::std::os::raw::c_char, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_variance_with_fixed_mean(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_sd_with_fixed_mean(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_tss(data: *const ::std::os::raw::c_char, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_tss_m(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_absdev(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_skew(data: *const ::std::os::raw::c_char, stride: usize, n: usize)
-        -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_kurtosis(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_lag1_autocorrelation(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_covariance(
-        data1: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_covariance(
+        data1: *const f64,
         stride1: usize,
-        data2: *const ::std::os::raw::c_char,
+        data2: *const f64,
         stride2: usize,
         n: usize,
     ) -> f64;
@@ -41519,10 +41501,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_correlation(
-        data1: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_correlation(
+        data1: *const f64,
         stride1: usize,
-        data2: *const ::std::os::raw::c_char,
+        data2: *const f64,
         stride2: usize,
         n: usize,
     ) -> f64;
@@ -41530,10 +41512,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_spearman(
-        data1: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_spearman(
+        data1: *const f64,
         stride1: usize,
-        data2: *const ::std::os::raw::c_char,
+        data2: *const f64,
         stride2: usize,
         n: usize,
         work: *mut f64,
@@ -41542,8 +41524,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_variance_m(
-        data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_variance_m(
+        data: *const f64,
         stride: usize,
         n: usize,
         mean: f64,
@@ -41552,8 +41534,13 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_sd_m(
-        data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_sd_m(data: *const f64, stride: usize, n: usize, mean: f64) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_absdev_m(
+        data: *const f64,
         stride: usize,
         n: usize,
         mean: f64,
@@ -41562,18 +41549,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_absdev_m(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_skew_m_sd(
-        data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_skew_m_sd(
+        data: *const f64,
         stride: usize,
         n: usize,
         mean: f64,
@@ -41583,8 +41560,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_kurtosis_m_sd(
-        data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_kurtosis_m_sd(
+        data: *const f64,
         stride: usize,
         n: usize,
         mean: f64,
@@ -41594,8 +41571,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_lag1_autocorrelation_m(
-        data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_lag1_autocorrelation_m(
+        data: *const f64,
         stride: usize,
         n: usize,
         mean: f64,
@@ -41604,10 +41581,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_covariance_m(
-        data1: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_covariance_m(
+        data1: *const f64,
         stride1: usize,
-        data2: *const ::std::os::raw::c_char,
+        data2: *const f64,
         stride2: usize,
         n: usize,
         mean1: f64,
@@ -41617,11 +41594,186 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_pvariance(
-        data1: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_wmean(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wvariance(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wsd(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wvariance_with_fixed_mean(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wsd_with_fixed_mean(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wtss(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wtss_m(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+        wmean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wabsdev(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wskew(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wkurtosis(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wvariance_m(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+        wmean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wsd_m(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+        wmean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wabsdev_m(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+        wmean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wskew_m_sd(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+        wmean: f64,
+        wsd: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_wkurtosis_m_sd(
+        w: *const f64,
+        wstride: usize,
+        data: *const f64,
+        stride: usize,
+        n: usize,
+        wmean: f64,
+        wsd: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_pvariance(
+        data1: *const f64,
         stride1: usize,
         n1: usize,
-        data2: *const ::std::os::raw::c_char,
+        data2: *const f64,
         stride2: usize,
         n2: usize,
     ) -> f64;
@@ -41629,11 +41781,11 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_ttest(
-        data1: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_ttest(
+        data1: *const f64,
         stride1: usize,
         n1: usize,
-        data2: *const ::std::os::raw::c_char,
+        data2: *const f64,
         stride2: usize,
         n2: usize,
     ) -> f64;
@@ -41641,28 +41793,20 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_max(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_char;
+    pub fn gsl_stats_long_double_max(data: *const f64, stride: usize, n: usize) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_min(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_char;
+    pub fn gsl_stats_long_double_min(data: *const f64, stride: usize, n: usize) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_minmax(
-        min: *mut ::std::os::raw::c_char,
-        max: *mut ::std::os::raw::c_char,
-        data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_minmax(
+        min: *mut f64,
+        max: *mut f64,
+        data: *const f64,
         stride: usize,
         n: usize,
     );
@@ -41670,28 +41814,20 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_max_index(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-    ) -> usize;
+    pub fn gsl_stats_long_double_max_index(data: *const f64, stride: usize, n: usize) -> usize;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_min_index(
-        data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-    ) -> usize;
+    pub fn gsl_stats_long_double_min_index(data: *const f64, stride: usize, n: usize) -> usize;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_minmax_index(
+    pub fn gsl_stats_long_double_minmax_index(
         min_index: *mut usize,
         max_index: *mut usize,
-        data: *const ::std::os::raw::c_char,
+        data: *const f64,
         stride: usize,
         n: usize,
     );
@@ -41699,18 +41835,13 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_select(
-        data: *mut ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-        k: usize,
-    ) -> ::std::os::raw::c_char;
+    pub fn gsl_stats_long_double_select(data: *mut f64, stride: usize, n: usize, k: usize) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_median_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_median_from_sorted_data(
+        sorted_data: *const f64,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -41718,17 +41849,13 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_median(
-        sorted_data: *mut ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-    ) -> f64;
+    pub fn gsl_stats_long_double_median(sorted_data: *mut f64, stride: usize, n: usize) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_quantile_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_quantile_from_sorted_data(
+        sorted_data: *const f64,
         stride: usize,
         n: usize,
         f: f64,
@@ -41737,9 +41864,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_trmean_from_sorted_data(
+    pub fn gsl_stats_long_double_trmean_from_sorted_data(
         trim: f64,
-        sorted_data: *const ::std::os::raw::c_char,
+        sorted_data: *const f64,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -41747,8 +41874,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_gastwirth_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_gastwirth_from_sorted_data(
+        sorted_data: *const f64,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -41756,8 +41883,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_mad0(
-        data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_mad0(
+        data: *const f64,
         stride: usize,
         n: usize,
         work: *mut f64,
@@ -41766,8 +41893,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_mad(
-        data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_mad(
+        data: *const f64,
         stride: usize,
         n: usize,
         work: *mut f64,
@@ -41776,42 +41903,42 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_Sn0_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_Sn0_from_sorted_data(
+        sorted_data: *const f64,
         stride: usize,
         n: usize,
-        work: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_char;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_char_Sn_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_char,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_char,
+        work: *mut f64,
     ) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_Qn0_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_Sn_from_sorted_data(
+        sorted_data: *const f64,
         stride: usize,
         n: usize,
-        work: *mut ::std::os::raw::c_char,
+        work: *mut f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_long_double_Qn0_from_sorted_data(
+        sorted_data: *const f64,
+        stride: usize,
+        n: usize,
+        work: *mut f64,
         work_int: *mut ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_char;
+    ) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_char_Qn_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_char,
+    pub fn gsl_stats_long_double_Qn_from_sorted_data(
+        sorted_data: *const f64,
         stride: usize,
         n: usize,
-        work: *mut ::std::os::raw::c_char,
+        work: *mut f64,
         work_int: *mut ::std::os::raw::c_int,
     ) -> f64;
 }
@@ -42818,13 +42945,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_mean(data: *const ::std::os::raw::c_int, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_variance(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_mean(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -42832,59 +42954,43 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_sd(data: *const ::std::os::raw::c_int, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_variance_with_fixed_mean(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_variance(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
-        mean: f64,
     ) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_sd_with_fixed_mean(
-        data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_tss(data: *const ::std::os::raw::c_int, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_tss_m(
-        data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_absdev(data: *const ::std::os::raw::c_int, stride: usize, n: usize)
+    pub fn gsl_stats_ulong_sd(data: *const ::std::os::raw::c_ulong, stride: usize, n: usize)
         -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_skew(data: *const ::std::os::raw::c_int, stride: usize, n: usize) -> f64;
+    pub fn gsl_stats_ulong_variance_with_fixed_mean(
+        data: *const ::std::os::raw::c_ulong,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_kurtosis(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_sd_with_fixed_mean(
+        data: *const ::std::os::raw::c_ulong,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ulong_tss(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -42892,8 +42998,18 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_lag1_autocorrelation(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_tss_m(
+        data: *const ::std::os::raw::c_ulong,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ulong_absdev(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -42901,10 +43017,37 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_covariance(
-        data1: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_skew(
+        data: *const ::std::os::raw::c_ulong,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ulong_kurtosis(
+        data: *const ::std::os::raw::c_ulong,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ulong_lag1_autocorrelation(
+        data: *const ::std::os::raw::c_ulong,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ulong_covariance(
+        data1: *const ::std::os::raw::c_ulong,
         stride1: usize,
-        data2: *const ::std::os::raw::c_int,
+        data2: *const ::std::os::raw::c_ulong,
         stride2: usize,
         n: usize,
     ) -> f64;
@@ -42912,10 +43055,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_correlation(
-        data1: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_correlation(
+        data1: *const ::std::os::raw::c_ulong,
         stride1: usize,
-        data2: *const ::std::os::raw::c_int,
+        data2: *const ::std::os::raw::c_ulong,
         stride2: usize,
         n: usize,
     ) -> f64;
@@ -42923,10 +43066,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_spearman(
-        data1: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_spearman(
+        data1: *const ::std::os::raw::c_ulong,
         stride1: usize,
-        data2: *const ::std::os::raw::c_int,
+        data2: *const ::std::os::raw::c_ulong,
         stride2: usize,
         n: usize,
         work: *mut f64,
@@ -42935,8 +43078,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_variance_m(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_variance_m(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
         mean: f64,
@@ -42945,8 +43088,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_sd_m(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_sd_m(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
         mean: f64,
@@ -42955,8 +43098,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_absdev_m(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_absdev_m(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
         mean: f64,
@@ -42965,19 +43108,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_skew_m_sd(
-        data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-        mean: f64,
-        sd: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_kurtosis_m_sd(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_skew_m_sd(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
         mean: f64,
@@ -42987,8 +43119,19 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_lag1_autocorrelation_m(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_kurtosis_m_sd(
+        data: *const ::std::os::raw::c_ulong,
+        stride: usize,
+        n: usize,
+        mean: f64,
+        sd: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ulong_lag1_autocorrelation_m(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
         mean: f64,
@@ -42997,10 +43140,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_covariance_m(
-        data1: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_covariance_m(
+        data1: *const ::std::os::raw::c_ulong,
         stride1: usize,
-        data2: *const ::std::os::raw::c_int,
+        data2: *const ::std::os::raw::c_ulong,
         stride2: usize,
         n: usize,
         mean1: f64,
@@ -43010,11 +43153,11 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_pvariance(
-        data1: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_pvariance(
+        data1: *const ::std::os::raw::c_ulong,
         stride1: usize,
         n1: usize,
-        data2: *const ::std::os::raw::c_int,
+        data2: *const ::std::os::raw::c_ulong,
         stride2: usize,
         n2: usize,
     ) -> f64;
@@ -43022,11 +43165,11 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_ttest(
-        data1: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_ttest(
+        data1: *const ::std::os::raw::c_ulong,
         stride1: usize,
         n1: usize,
-        data2: *const ::std::os::raw::c_int,
+        data2: *const ::std::os::raw::c_ulong,
         stride2: usize,
         n2: usize,
     ) -> f64;
@@ -43034,28 +43177,28 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_max(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_max(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
-    ) -> ::std::os::raw::c_int;
+    ) -> ::std::os::raw::c_ulong;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_min(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_min(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
-    ) -> ::std::os::raw::c_int;
+    ) -> ::std::os::raw::c_ulong;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_minmax(
-        min: *mut ::std::os::raw::c_int,
-        max: *mut ::std::os::raw::c_int,
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_minmax(
+        min: *mut ::std::os::raw::c_ulong,
+        max: *mut ::std::os::raw::c_ulong,
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     );
@@ -43063,8 +43206,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_max_index(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_max_index(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> usize;
@@ -43072,8 +43215,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_min_index(
-        data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_min_index(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> usize;
@@ -43081,10 +43224,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_minmax_index(
+    pub fn gsl_stats_ulong_minmax_index(
         min_index: *mut usize,
         max_index: *mut usize,
-        data: *const ::std::os::raw::c_int,
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     );
@@ -43092,18 +43235,18 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_select(
-        data: *mut ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_select(
+        data: *mut ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
         k: usize,
-    ) -> ::std::os::raw::c_int;
+    ) -> ::std::os::raw::c_ulong;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_median_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_median_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -43111,8 +43254,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_median(
-        sorted_data: *mut ::std::os::raw::c_int,
+    pub fn gsl_stats_ulong_median(
+        sorted_data: *mut ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -43120,533 +43263,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_int_quantile_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-        f: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_trmean_from_sorted_data(
-        trim: f64,
-        sorted_data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_gastwirth_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_mad0(
-        data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-        work: *mut f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_mad(
-        data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-        work: *mut f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_Sn0_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_Sn_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_int,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_Qn0_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_int,
-        work_int: *mut ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_int_Qn_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_int,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_int,
-        work_int: *mut ::std::os::raw::c_int,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_mean(data: *const f64, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_variance(data: *const f64, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_sd(data: *const f64, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_variance_with_fixed_mean(
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_sd_with_fixed_mean(
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_tss(data: *const f64, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_tss_m(data: *const f64, stride: usize, n: usize, mean: f64)
-        -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_absdev(data: *const f64, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_skew(data: *const f64, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_kurtosis(data: *const f64, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_lag1_autocorrelation(
-        data: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_covariance(
-        data1: *const f64,
-        stride1: usize,
-        data2: *const f64,
-        stride2: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_correlation(
-        data1: *const f64,
-        stride1: usize,
-        data2: *const f64,
-        stride2: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_spearman(
-        data1: *const f64,
-        stride1: usize,
-        data2: *const f64,
-        stride2: usize,
-        n: usize,
-        work: *mut f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_variance_m(
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_sd_m(data: *const f64, stride: usize, n: usize, mean: f64) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_absdev_m(
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_skew_m_sd(
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        mean: f64,
-        sd: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_kurtosis_m_sd(
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        mean: f64,
-        sd: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_lag1_autocorrelation_m(
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_covariance_m(
-        data1: *const f64,
-        stride1: usize,
-        data2: *const f64,
-        stride2: usize,
-        n: usize,
-        mean1: f64,
-        mean2: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wmean(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wvariance(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wsd(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wvariance_with_fixed_mean(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wsd_with_fixed_mean(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wtss(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wtss_m(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        wmean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wabsdev(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wskew(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wkurtosis(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wvariance_m(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        wmean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wsd_m(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        wmean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wabsdev_m(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        wmean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wskew_m_sd(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        wmean: f64,
-        wsd: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_wkurtosis_m_sd(
-        w: *const f64,
-        wstride: usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-        wmean: f64,
-        wsd: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_pvariance(
-        data1: *const f64,
-        stride1: usize,
-        n1: usize,
-        data2: *const f64,
-        stride2: usize,
-        n2: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_ttest(
-        data1: *const f64,
-        stride1: usize,
-        n1: usize,
-        data2: *const f64,
-        stride2: usize,
-        n2: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_max(data: *const f64, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_min(data: *const f64, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_minmax(
-        min: *mut f64,
-        max: *mut f64,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_max_index(data: *const f64, stride: usize, n: usize) -> usize;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_min_index(data: *const f64, stride: usize, n: usize) -> usize;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_minmax_index(
-        min_index: *mut usize,
-        max_index: *mut usize,
-        data: *const f64,
-        stride: usize,
-        n: usize,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_select(data: *mut f64, stride: usize, n: usize, k: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_median_from_sorted_data(
-        sorted_data: *const f64,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_median(sorted_data: *mut f64, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_quantile_from_sorted_data(
-        sorted_data: *const f64,
+    pub fn gsl_stats_ulong_quantile_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
         f: f64,
@@ -43655,9 +43273,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_long_double_trmean_from_sorted_data(
+    pub fn gsl_stats_ulong_trmean_from_sorted_data(
         trim: f64,
-        sorted_data: *const f64,
+        sorted_data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -43665,8 +43283,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_long_double_gastwirth_from_sorted_data(
-        sorted_data: *const f64,
+    pub fn gsl_stats_ulong_gastwirth_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -43674,8 +43292,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_long_double_mad0(
-        data: *const f64,
+    pub fn gsl_stats_ulong_mad0(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
         work: *mut f64,
@@ -43684,8 +43302,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_long_double_mad(
-        data: *const f64,
+    pub fn gsl_stats_ulong_mad(
+        data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
         work: *mut f64,
@@ -43694,42 +43312,42 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_long_double_Sn0_from_sorted_data(
-        sorted_data: *const f64,
+    pub fn gsl_stats_ulong_Sn0_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
-        work: *mut f64,
+        work: *mut ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ulong_Sn_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ulong,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_ulong,
     ) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_long_double_Sn_from_sorted_data(
-        sorted_data: *const f64,
+    pub fn gsl_stats_ulong_Qn0_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
-        work: *mut f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_long_double_Qn0_from_sorted_data(
-        sorted_data: *const f64,
-        stride: usize,
-        n: usize,
-        work: *mut f64,
+        work: *mut ::std::os::raw::c_ulong,
         work_int: *mut ::std::os::raw::c_int,
-    ) -> f64;
+    ) -> ::std::os::raw::c_ulong;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_long_double_Qn_from_sorted_data(
-        sorted_data: *const f64,
+    pub fn gsl_stats_ulong_Qn_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ulong,
         stride: usize,
         n: usize,
-        work: *mut f64,
+        work: *mut ::std::os::raw::c_ulong,
         work_int: *mut ::std::os::raw::c_int,
     ) -> f64;
 }
@@ -44128,6 +43746,1209 @@ unsafe extern "C" {
         stride: usize,
         n: usize,
         work: *mut ::std::os::raw::c_long,
+        work_int: *mut ::std::os::raw::c_int,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_mean(data: *const ::std::os::raw::c_uint, stride: usize, n: usize)
+        -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_variance(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_sd(data: *const ::std::os::raw::c_uint, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_variance_with_fixed_mean(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_sd_with_fixed_mean(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_tss(data: *const ::std::os::raw::c_uint, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_tss_m(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_absdev(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_skew(data: *const ::std::os::raw::c_uint, stride: usize, n: usize)
+        -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_kurtosis(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_lag1_autocorrelation(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_covariance(
+        data1: *const ::std::os::raw::c_uint,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_uint,
+        stride2: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_correlation(
+        data1: *const ::std::os::raw::c_uint,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_uint,
+        stride2: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_spearman(
+        data1: *const ::std::os::raw::c_uint,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_uint,
+        stride2: usize,
+        n: usize,
+        work: *mut f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_variance_m(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_sd_m(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_absdev_m(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_skew_m_sd(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        mean: f64,
+        sd: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_kurtosis_m_sd(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        mean: f64,
+        sd: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_lag1_autocorrelation_m(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_covariance_m(
+        data1: *const ::std::os::raw::c_uint,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_uint,
+        stride2: usize,
+        n: usize,
+        mean1: f64,
+        mean2: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_pvariance(
+        data1: *const ::std::os::raw::c_uint,
+        stride1: usize,
+        n1: usize,
+        data2: *const ::std::os::raw::c_uint,
+        stride2: usize,
+        n2: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_ttest(
+        data1: *const ::std::os::raw::c_uint,
+        stride1: usize,
+        n1: usize,
+        data2: *const ::std::os::raw::c_uint,
+        stride2: usize,
+        n2: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_max(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_uint;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_min(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_uint;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_minmax(
+        min: *mut ::std::os::raw::c_uint,
+        max: *mut ::std::os::raw::c_uint,
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_max_index(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> usize;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_min_index(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> usize;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_minmax_index(
+        min_index: *mut usize,
+        max_index: *mut usize,
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_select(
+        data: *mut ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        k: usize,
+    ) -> ::std::os::raw::c_uint;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_median_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_median(
+        sorted_data: *mut ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_quantile_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        f: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_trmean_from_sorted_data(
+        trim: f64,
+        sorted_data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_gastwirth_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_mad0(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        work: *mut f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_mad(
+        data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        work: *mut f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_Sn0_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_uint,
+    ) -> ::std::os::raw::c_uint;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_Sn_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_uint,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_Qn0_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_uint,
+        work_int: *mut ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_uint;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_uint_Qn_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_uint,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_uint,
+        work_int: *mut ::std::os::raw::c_int,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_mean(data: *const ::std::os::raw::c_int, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_variance(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_sd(data: *const ::std::os::raw::c_int, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_variance_with_fixed_mean(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_sd_with_fixed_mean(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_tss(data: *const ::std::os::raw::c_int, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_tss_m(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_absdev(data: *const ::std::os::raw::c_int, stride: usize, n: usize)
+        -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_skew(data: *const ::std::os::raw::c_int, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_kurtosis(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_lag1_autocorrelation(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_covariance(
+        data1: *const ::std::os::raw::c_int,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_int,
+        stride2: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_correlation(
+        data1: *const ::std::os::raw::c_int,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_int,
+        stride2: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_spearman(
+        data1: *const ::std::os::raw::c_int,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_int,
+        stride2: usize,
+        n: usize,
+        work: *mut f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_variance_m(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_sd_m(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_absdev_m(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_skew_m_sd(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        mean: f64,
+        sd: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_kurtosis_m_sd(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        mean: f64,
+        sd: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_lag1_autocorrelation_m(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_covariance_m(
+        data1: *const ::std::os::raw::c_int,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_int,
+        stride2: usize,
+        n: usize,
+        mean1: f64,
+        mean2: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_pvariance(
+        data1: *const ::std::os::raw::c_int,
+        stride1: usize,
+        n1: usize,
+        data2: *const ::std::os::raw::c_int,
+        stride2: usize,
+        n2: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_ttest(
+        data1: *const ::std::os::raw::c_int,
+        stride1: usize,
+        n1: usize,
+        data2: *const ::std::os::raw::c_int,
+        stride2: usize,
+        n2: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_max(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_min(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_minmax(
+        min: *mut ::std::os::raw::c_int,
+        max: *mut ::std::os::raw::c_int,
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_max_index(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> usize;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_min_index(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> usize;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_minmax_index(
+        min_index: *mut usize,
+        max_index: *mut usize,
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_select(
+        data: *mut ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        k: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_median_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_median(
+        sorted_data: *mut ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_quantile_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        f: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_trmean_from_sorted_data(
+        trim: f64,
+        sorted_data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_gastwirth_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_mad0(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        work: *mut f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_mad(
+        data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        work: *mut f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_Sn0_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_Sn_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_int,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_Qn0_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_int,
+        work_int: *mut ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_int_Qn_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_int,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_int,
+        work_int: *mut ::std::os::raw::c_int,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_mean(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_variance(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_sd(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_variance_with_fixed_mean(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_sd_with_fixed_mean(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_tss(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_tss_m(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_absdev(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_skew(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_kurtosis(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_lag1_autocorrelation(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_covariance(
+        data1: *const ::std::os::raw::c_ushort,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_ushort,
+        stride2: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_correlation(
+        data1: *const ::std::os::raw::c_ushort,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_ushort,
+        stride2: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_spearman(
+        data1: *const ::std::os::raw::c_ushort,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_ushort,
+        stride2: usize,
+        n: usize,
+        work: *mut f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_variance_m(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_sd_m(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_absdev_m(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_skew_m_sd(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        mean: f64,
+        sd: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_kurtosis_m_sd(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        mean: f64,
+        sd: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_lag1_autocorrelation_m(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_covariance_m(
+        data1: *const ::std::os::raw::c_ushort,
+        stride1: usize,
+        data2: *const ::std::os::raw::c_ushort,
+        stride2: usize,
+        n: usize,
+        mean1: f64,
+        mean2: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_pvariance(
+        data1: *const ::std::os::raw::c_ushort,
+        stride1: usize,
+        n1: usize,
+        data2: *const ::std::os::raw::c_ushort,
+        stride2: usize,
+        n2: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_ttest(
+        data1: *const ::std::os::raw::c_ushort,
+        stride1: usize,
+        n1: usize,
+        data2: *const ::std::os::raw::c_ushort,
+        stride2: usize,
+        n2: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_max(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_ushort;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_min(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> ::std::os::raw::c_ushort;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_minmax(
+        min: *mut ::std::os::raw::c_ushort,
+        max: *mut ::std::os::raw::c_ushort,
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_max_index(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> usize;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_min_index(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> usize;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_minmax_index(
+        min_index: *mut usize,
+        max_index: *mut usize,
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    );
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_select(
+        data: *mut ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        k: usize,
+    ) -> ::std::os::raw::c_ushort;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_median_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_median(
+        sorted_data: *mut ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_quantile_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        f: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_trmean_from_sorted_data(
+        trim: f64,
+        sorted_data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_gastwirth_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_mad0(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        work: *mut f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_mad(
+        data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        work: *mut f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_Sn0_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_ushort,
+    ) -> ::std::os::raw::c_ushort;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_Sn_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_ushort,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_Qn0_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_ushort,
+        work_int: *mut ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_ushort;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_ushort_Qn_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_ushort,
+        stride: usize,
+        n: usize,
+        work: *mut ::std::os::raw::c_ushort,
         work_int: *mut ::std::os::raw::c_int,
     ) -> f64;
 }
@@ -44952,14 +45773,14 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_mean(data: *const ::std::os::raw::c_uint, stride: usize, n: usize)
+    pub fn gsl_stats_char_mean(data: *const ::std::os::raw::c_char, stride: usize, n: usize)
         -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_variance(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_variance(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -44967,23 +45788,13 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_sd(data: *const ::std::os::raw::c_uint, stride: usize, n: usize) -> f64;
+    pub fn gsl_stats_char_sd(data: *const ::std::os::raw::c_char, stride: usize, n: usize) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_variance_with_fixed_mean(
-        data: *const ::std::os::raw::c_uint,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_uint_sd_with_fixed_mean(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_variance_with_fixed_mean(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         mean: f64,
@@ -44992,13 +45803,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_tss(data: *const ::std::os::raw::c_uint, stride: usize, n: usize) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_uint_tss_m(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_sd_with_fixed_mean(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         mean: f64,
@@ -45007,8 +45813,23 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_absdev(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_tss(data: *const ::std::os::raw::c_char, stride: usize, n: usize) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_char_tss_m(
+        data: *const ::std::os::raw::c_char,
+        stride: usize,
+        n: usize,
+        mean: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_char_absdev(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -45016,14 +45837,14 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_skew(data: *const ::std::os::raw::c_uint, stride: usize, n: usize)
+    pub fn gsl_stats_char_skew(data: *const ::std::os::raw::c_char, stride: usize, n: usize)
         -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_kurtosis(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_kurtosis(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -45031,8 +45852,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_lag1_autocorrelation(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_lag1_autocorrelation(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -45040,10 +45861,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_covariance(
-        data1: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_covariance(
+        data1: *const ::std::os::raw::c_char,
         stride1: usize,
-        data2: *const ::std::os::raw::c_uint,
+        data2: *const ::std::os::raw::c_char,
         stride2: usize,
         n: usize,
     ) -> f64;
@@ -45051,10 +45872,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_correlation(
-        data1: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_correlation(
+        data1: *const ::std::os::raw::c_char,
         stride1: usize,
-        data2: *const ::std::os::raw::c_uint,
+        data2: *const ::std::os::raw::c_char,
         stride2: usize,
         n: usize,
     ) -> f64;
@@ -45062,10 +45883,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_spearman(
-        data1: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_spearman(
+        data1: *const ::std::os::raw::c_char,
         stride1: usize,
-        data2: *const ::std::os::raw::c_uint,
+        data2: *const ::std::os::raw::c_char,
         stride2: usize,
         n: usize,
         work: *mut f64,
@@ -45074,8 +45895,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_variance_m(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_variance_m(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         mean: f64,
@@ -45084,8 +45905,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_sd_m(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_sd_m(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         mean: f64,
@@ -45094,8 +45915,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_absdev_m(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_absdev_m(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         mean: f64,
@@ -45104,19 +45925,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_skew_m_sd(
-        data: *const ::std::os::raw::c_uint,
-        stride: usize,
-        n: usize,
-        mean: f64,
-        sd: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_uint_kurtosis_m_sd(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_skew_m_sd(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         mean: f64,
@@ -45126,8 +45936,19 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_lag1_autocorrelation_m(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_kurtosis_m_sd(
+        data: *const ::std::os::raw::c_char,
+        stride: usize,
+        n: usize,
+        mean: f64,
+        sd: f64,
+    ) -> f64;
+}
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
+unsafe extern "C" {
+    pub fn gsl_stats_char_lag1_autocorrelation_m(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         mean: f64,
@@ -45136,10 +45957,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_covariance_m(
-        data1: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_covariance_m(
+        data1: *const ::std::os::raw::c_char,
         stride1: usize,
-        data2: *const ::std::os::raw::c_uint,
+        data2: *const ::std::os::raw::c_char,
         stride2: usize,
         n: usize,
         mean1: f64,
@@ -45149,11 +45970,11 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_pvariance(
-        data1: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_pvariance(
+        data1: *const ::std::os::raw::c_char,
         stride1: usize,
         n1: usize,
-        data2: *const ::std::os::raw::c_uint,
+        data2: *const ::std::os::raw::c_char,
         stride2: usize,
         n2: usize,
     ) -> f64;
@@ -45161,11 +45982,11 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_ttest(
-        data1: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_ttest(
+        data1: *const ::std::os::raw::c_char,
         stride1: usize,
         n1: usize,
-        data2: *const ::std::os::raw::c_uint,
+        data2: *const ::std::os::raw::c_char,
         stride2: usize,
         n2: usize,
     ) -> f64;
@@ -45173,28 +45994,28 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_max(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_max(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
-    ) -> ::std::os::raw::c_uint;
+    ) -> ::std::os::raw::c_char;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_min(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_min(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
-    ) -> ::std::os::raw::c_uint;
+    ) -> ::std::os::raw::c_char;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_minmax(
-        min: *mut ::std::os::raw::c_uint,
-        max: *mut ::std::os::raw::c_uint,
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_minmax(
+        min: *mut ::std::os::raw::c_char,
+        max: *mut ::std::os::raw::c_char,
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     );
@@ -45202,8 +46023,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_max_index(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_max_index(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> usize;
@@ -45211,8 +46032,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_min_index(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_min_index(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> usize;
@@ -45220,10 +46041,10 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_minmax_index(
+    pub fn gsl_stats_char_minmax_index(
         min_index: *mut usize,
         max_index: *mut usize,
-        data: *const ::std::os::raw::c_uint,
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     );
@@ -45231,18 +46052,18 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_select(
-        data: *mut ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_select(
+        data: *mut ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         k: usize,
-    ) -> ::std::os::raw::c_uint;
+    ) -> ::std::os::raw::c_char;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_median_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_median_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -45250,8 +46071,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_median(
-        sorted_data: *mut ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_median(
+        sorted_data: *mut ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -45259,8 +46080,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_quantile_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_quantile_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         f: f64,
@@ -45269,9 +46090,9 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_trmean_from_sorted_data(
+    pub fn gsl_stats_char_trmean_from_sorted_data(
         trim: f64,
-        sorted_data: *const ::std::os::raw::c_uint,
+        sorted_data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -45279,8 +46100,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_gastwirth_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_gastwirth_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
     ) -> f64;
@@ -45288,8 +46109,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_mad0(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_mad0(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         work: *mut f64,
@@ -45298,8 +46119,8 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_mad(
-        data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_mad(
+        data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
         work: *mut f64,
@@ -45308,863 +46129,42 @@ unsafe extern "C" {
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_Sn0_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_Sn0_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
-        work: *mut ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_uint;
+        work: *mut ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_char;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_Sn_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_Sn_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
-        work: *mut ::std::os::raw::c_uint,
+        work: *mut ::std::os::raw::c_char,
     ) -> f64;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_Qn0_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_Qn0_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
-        work: *mut ::std::os::raw::c_uint,
+        work: *mut ::std::os::raw::c_char,
         work_int: *mut ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_uint;
+    ) -> ::std::os::raw::c_char;
 }
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
 #[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
 unsafe extern "C" {
-    pub fn gsl_stats_uint_Qn_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_uint,
+    pub fn gsl_stats_char_Qn_from_sorted_data(
+        sorted_data: *const ::std::os::raw::c_char,
         stride: usize,
         n: usize,
-        work: *mut ::std::os::raw::c_uint,
-        work_int: *mut ::std::os::raw::c_int,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_mean(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_variance(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_sd(data: *const ::std::os::raw::c_ulong, stride: usize, n: usize)
-        -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_variance_with_fixed_mean(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_sd_with_fixed_mean(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_tss(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_tss_m(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_absdev(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_skew(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_kurtosis(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_lag1_autocorrelation(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_covariance(
-        data1: *const ::std::os::raw::c_ulong,
-        stride1: usize,
-        data2: *const ::std::os::raw::c_ulong,
-        stride2: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_correlation(
-        data1: *const ::std::os::raw::c_ulong,
-        stride1: usize,
-        data2: *const ::std::os::raw::c_ulong,
-        stride2: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_spearman(
-        data1: *const ::std::os::raw::c_ulong,
-        stride1: usize,
-        data2: *const ::std::os::raw::c_ulong,
-        stride2: usize,
-        n: usize,
-        work: *mut f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_variance_m(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_sd_m(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_absdev_m(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_skew_m_sd(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        mean: f64,
-        sd: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_kurtosis_m_sd(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        mean: f64,
-        sd: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_lag1_autocorrelation_m(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_covariance_m(
-        data1: *const ::std::os::raw::c_ulong,
-        stride1: usize,
-        data2: *const ::std::os::raw::c_ulong,
-        stride2: usize,
-        n: usize,
-        mean1: f64,
-        mean2: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_pvariance(
-        data1: *const ::std::os::raw::c_ulong,
-        stride1: usize,
-        n1: usize,
-        data2: *const ::std::os::raw::c_ulong,
-        stride2: usize,
-        n2: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_ttest(
-        data1: *const ::std::os::raw::c_ulong,
-        stride1: usize,
-        n1: usize,
-        data2: *const ::std::os::raw::c_ulong,
-        stride2: usize,
-        n2: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_max(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_ulong;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_min(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_ulong;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_minmax(
-        min: *mut ::std::os::raw::c_ulong,
-        max: *mut ::std::os::raw::c_ulong,
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_max_index(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> usize;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_min_index(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> usize;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_minmax_index(
-        min_index: *mut usize,
-        max_index: *mut usize,
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_select(
-        data: *mut ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        k: usize,
-    ) -> ::std::os::raw::c_ulong;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_median_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_median(
-        sorted_data: *mut ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_quantile_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        f: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_trmean_from_sorted_data(
-        trim: f64,
-        sorted_data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_gastwirth_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_mad0(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        work: *mut f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_mad(
-        data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        work: *mut f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_Sn0_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_ulong,
-    ) -> ::std::os::raw::c_ulong;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_Sn_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_ulong,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_Qn0_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_ulong,
-        work_int: *mut ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_ulong;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ulong_Qn_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ulong,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_ulong,
-        work_int: *mut ::std::os::raw::c_int,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_mean(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_variance(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_sd(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_variance_with_fixed_mean(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_sd_with_fixed_mean(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_tss(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_tss_m(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_absdev(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_skew(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_kurtosis(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_lag1_autocorrelation(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_covariance(
-        data1: *const ::std::os::raw::c_ushort,
-        stride1: usize,
-        data2: *const ::std::os::raw::c_ushort,
-        stride2: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_correlation(
-        data1: *const ::std::os::raw::c_ushort,
-        stride1: usize,
-        data2: *const ::std::os::raw::c_ushort,
-        stride2: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_spearman(
-        data1: *const ::std::os::raw::c_ushort,
-        stride1: usize,
-        data2: *const ::std::os::raw::c_ushort,
-        stride2: usize,
-        n: usize,
-        work: *mut f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_variance_m(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_sd_m(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_absdev_m(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_skew_m_sd(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        mean: f64,
-        sd: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_kurtosis_m_sd(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        mean: f64,
-        sd: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_lag1_autocorrelation_m(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        mean: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_covariance_m(
-        data1: *const ::std::os::raw::c_ushort,
-        stride1: usize,
-        data2: *const ::std::os::raw::c_ushort,
-        stride2: usize,
-        n: usize,
-        mean1: f64,
-        mean2: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_pvariance(
-        data1: *const ::std::os::raw::c_ushort,
-        stride1: usize,
-        n1: usize,
-        data2: *const ::std::os::raw::c_ushort,
-        stride2: usize,
-        n2: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_ttest(
-        data1: *const ::std::os::raw::c_ushort,
-        stride1: usize,
-        n1: usize,
-        data2: *const ::std::os::raw::c_ushort,
-        stride2: usize,
-        n2: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_max(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_ushort;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_min(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> ::std::os::raw::c_ushort;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_minmax(
-        min: *mut ::std::os::raw::c_ushort,
-        max: *mut ::std::os::raw::c_ushort,
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_max_index(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> usize;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_min_index(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> usize;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_minmax_index(
-        min_index: *mut usize,
-        max_index: *mut usize,
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    );
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_select(
-        data: *mut ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        k: usize,
-    ) -> ::std::os::raw::c_ushort;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_median_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_median(
-        sorted_data: *mut ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_quantile_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        f: f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_trmean_from_sorted_data(
-        trim: f64,
-        sorted_data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_gastwirth_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_mad0(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        work: *mut f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_mad(
-        data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        work: *mut f64,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_Sn0_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_ushort,
-    ) -> ::std::os::raw::c_ushort;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_Sn_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_ushort,
-    ) -> f64;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_Qn0_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_ushort,
-        work_int: *mut ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_ushort;
-}
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gsl", kind = "raw-dylib"))]
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name = "gslcblas", kind = "raw-dylib"))]
-unsafe extern "C" {
-    pub fn gsl_stats_ushort_Qn_from_sorted_data(
-        sorted_data: *const ::std::os::raw::c_ushort,
-        stride: usize,
-        n: usize,
-        work: *mut ::std::os::raw::c_ushort,
+        work: *mut ::std::os::raw::c_char,
         work_int: *mut ::std::os::raw::c_int,
     ) -> f64;
 }
