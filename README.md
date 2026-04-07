@@ -36,6 +36,8 @@ winget install --id LLVM.LLVM --source winget
 If needed, set LIBCLANG_PATH to your LLVM bin directory so bindgen can locate libclang.  
 如有需要，请将 LIBCLANG_PATH 设置为 LLVM 的 bin 目录，确保 bindgen 能找到 libclang。
 
+仅仅中文需要阅读这一段：如果还会报错`pwsh`找不到，则应该更新Powershell到最新版本，或者将`pwsh`替换为`powershell`。另外如果`winget`下载的速度非常慢（考虑到LLVM和Power Shell都是在Github下载），可以在`winget`命令运行后得到的下载链接放在[gh-hub](https://gh-proxy.com/)上加速下载，通常选择香港的那个线路会飞快。
+
 The script [scripts/generate-gsl-bindings.ps1](scripts/generate-gsl-bindings.ps1) already contains fallback logic for LIBCLANG_PATH (customize it to your local environment if needed).  
 [scripts/generate-gsl-bindings.ps1](scripts/generate-gsl-bindings.ps1) 已内置 LIBCLANG_PATH 的兜底逻辑（如有需要可改成你的本机路径）。
 

@@ -6,7 +6,7 @@ Set-Location $repoRoot
 
 # Set this if bindgen can't find libclang on your system. 
 # On Windows, the LLVM installer includes a copy of libclang.dll that works with bindgen.
-# $env:LIBCLANG_PATH = "C:\Program Files\LLVM\bin" # change this if your LLVM is installed somewhere else
+$env:LIBCLANG_PATH = "D:\Program Files\LLVM\bin" # change this if your LLVM is installed somewhere else
 # Set it to the directory of LLVM
 #  winget install --id LLVM.LLVM --source winget will install LLVM
 
