@@ -162,7 +162,7 @@ fn main() {
 
     // Sobol quasi Monte Carlo example:
     // estimate integral over [0,1]^D of f(x1, x2, ..., xD).
-    let dim = 6_usize; // 3-dimensional integral
+    let dim = 16_usize; // 3-dimensional integral
     let dim_qrng = u32::try_from(dim).expect("dimension does not fit in u32");
     let n_points = 2000_usize; // number of quasi-random points to sample
     let mut points = vec![0.0_f64; dim * n_points];
