@@ -1,1 +1,3 @@
 /target
+include/wrapper.h
+src/gsl_bindings.rs
