@@ -1,4 +1,4 @@
-use rust_gsl_bindings::gsl;
+use rust_gsl_bindings::*;
 
 #[test]
 fn poly_const_and_struct_and_function() {

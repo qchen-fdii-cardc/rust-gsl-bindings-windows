@@ -1,1 +1,2 @@
+mod chapters;
 mod modules;

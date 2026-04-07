@@ -15,6 +15,23 @@ pub fn c_array_to_str<const N: usize>(bytes: &[u8; N]) -> std::borrow::Cow<'_, s
     String::from_utf8_lossy(&bytes[..end])
 }
 
+pub fn c_ptr_to_str(ptr: *const std::ffi::c_char) -> std::borrow::Cow<'static, str> {
+    if ptr.is_null() {
+        return std::borrow::Cow::Borrowed("<null>");
+    }
+    unsafe {
+        std::ffi::CStr::from_ptr(ptr)
+            .to_string_lossy()
+            .into_owned()
+            .into()
+    }
+}
+
+#[macro_export]
+macro_rules! cstr {
+    ($bytes:expr) => {{ $crate::c_ptr_to_str($bytes) }};
+}
+
 #[macro_export]
 macro_rules! gsl_cstr {
     ($bytes:expr) => {{ $crate::c_array_to_str($bytes) }};
