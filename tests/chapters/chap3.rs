@@ -1,16 +1,7 @@
 use rust_gsl_bindings::*;
 
 #[test]
-fn chapter1_sf_bessel() {
-    let br = gsl_call!(gsl_sf_bessel_J0(5.0));
-    assert!(br.is_finite());
-    assert_eq!(br, -1.775967713143382642e-01);
-
-    println!("J0(5.0) = {br:.18e}");
-}
-
-#[test]
-fn chapter1_error_handling() {
+fn chapter3_error_handling() {
     unsafe extern "C" fn handler(
         reason: *const std::os::raw::c_char,
         file: *const std::os::raw::c_char,
